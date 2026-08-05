@@ -18,6 +18,9 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,20 +28,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./WebDev
 
       - name: Lint CSS
         run: npm run lint:css
-        working-directory: ./WebDev
 
       - name: Lint HTML
         run: npm run lint:html
-        working-directory: ./WebDev
 
   deploy:
     name: Deploy to GitHub Pages
@@ -57,7 +57,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./WebDev
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
