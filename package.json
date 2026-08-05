@@ -1,0 +1,40 @@
+{
+  "name": "webdev-demos",
+  "version": "1.0.0",
+  "description": "Demos de páginas web para negocios locales - Restaurante, Tienda, Taller + Portafolio",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "lint:css": "npx stylelint \"**/*.css\"",
+    "lint:html": "npx htmlhint \"**/*.html\"",
+    "lint": "npm run lint:css && npm run lint:html",
+    "format": "npx prettier --write \"**/*.{html,css,js,json,md}\"",
+    "test": "npm run lint",
+    "build": "echo 'Static site - no build step needed' && cp -r . ../dist",
+    "deploy": "npm run build && npx gh-pages -d ../dist"
+  },
+  "keywords": [
+    "webdev",
+    "freelance",
+    "demos",
+    "restaurant",
+    "store",
+    "workshop",
+    "portfolio"
+  ],
+  "author": "Angel Gabriel Campo <gabyzx.dev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "htmlhint": "^1.1.0",
+    "prettier": "^3.0.0",
+    "serve": "^14.0.0",
+    "gh-pages": "^6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

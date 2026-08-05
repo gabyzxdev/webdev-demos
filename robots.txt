@@ -1,0 +1,16 @@
+# robots.txt para WebDev demos
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gabyzxdev.github.io/WebDev/sitemap.xml
+
+# No indexar archivos de desarrollo
+Disallow: /shared/
+Disallow: /images/
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.map$
+
+# Crawl-delay para ser amables
+Crawl-delay: 10

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#0f172a"/>
+  <text x="600" y="280" font-family="system-ui, sans-serif" font-size="48" font-weight="600" fill="#38bdf8" text-anchor="middle">Angel Gabriel Campo</text>
+  <text x="600" y="340" font-family="system-ui, sans-serif" font-size="24" fill="rgba(56,189,248,0.7)" text-anchor="middle">Desarrollo Web</text>
+  <circle cx="600" cy="420" r="40" fill="none" stroke="rgba(56,189,248,0.3)" stroke-width="3"/>
+  <path d="M590 410l10 10 20-20" fill="none" stroke="rgba(56,189,248,0.5)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante La Parrilla — Los mejores asados de Cali | Pide por WhatsApp</title>
+  <meta name="description" content="Restaurante La Parrilla en Cali. Asados al carbón, comida típica colombiana y ambiente familiar. Pide por WhatsApp y ven a visitarnos.">
+  <meta name="author" content="Restaurante La Parrilla">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/demo-restaurante/">
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=80" fetchpriority="high">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#c0392b">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Restaurante La Parrilla — Los mejores asados de Cali">
+  <meta property="og:description" content="Asados al carbón, comida típica colombiana y ambiente familiar. Pide por WhatsApp.">
+  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/demo-restaurante/">
+  <meta property="og:site_name" content="Restaurante La Parrilla">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80">
+  <meta property="og:image:alt" content="Plato de asado en Restaurante La Parrilla">
+  <meta http-equiv="content-language" content="es-CO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Restaurante La Parrilla — Los mejores asados de Cali">
+  <meta name="twitter:description" content="Asados al carbón, comida típica colombiana y ambiente familiar. Pide por WhatsApp.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80">
+
+  <!-- Icono -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c0392b'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white'>🍖</text></svg>">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/variables.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/whatsapp-float.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurante La Parrilla",
+    "description": "Asados al carbón, comida típica colombiana y ambiente familiar en Cali.",
+    "telephone": "+573178695838",
+    "servesCuisine": ["Asados", "Comida típica colombiana"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 5 # 20-30, Granada",
+      "addressLocality": "Cali",
+      "addressRegion": "Valle del Cauca",
+      "addressCountry": "CO"
+    },
+    "openingHours": "Mo-Su 12:00-23:00",
+    "priceRange": "COP 22000-45000",
+    "sameAs": ["https://wa.me/573178695838"],
+    "image": ["https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80"]
+  }
+  </script>
+</head>
+<body class="theme-restaurante">
+
+  <a href="#inicio" class="skip-link">Saltar al contenido</a>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="nav">
+    <div class="nav-contenedor">
+      <a href="#inicio" class="logo">La Parrilla</a>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <nav class="menu" id="menu-principal" aria-label="Menú principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#testimonios">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/573178695838" class="btn-whatsapp-nav">Pedir por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>Los mejores asados de Cali</h1>
+        <p>Carne a la parrilla, comida típica colombiana y un ambiente familiar que te hará volver.</p>
+        <a href="https://wa.me/573178695838" class="btn-whatsapp">Pedir por WhatsApp</a>
+        <a href="#menu" class="btn-out">Ver el menú</a>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="seccion">
+      <h2>Sobre nosotros</h2>
+      <p>Somos un restaurante familiar en el corazón de Cali, abierto desde 2010. Usamos ingredientes frescos del mercado, leña real para la parrilla y recetas que pasan de generación en generación.</p>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>📍 Ubicación</h3>
+          <p>Calle 5 # 20-30, Granada, Cali</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🕐 Horario</h3>
+          <p>Lunes a domingo · 12:00 pm – 11:00 pm</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🍖 Especialidad</h3>
+          <p>Asado al carbón, bandeja paisa y sancocho</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ -->
+    <section id="menu" class="seccion seccion-oscura">
+      <h2>Nuestro menú</h2>
+      <div class="grid-menu">
+        <article class="plato">
+          <img loading="lazy" src="images/plato-placeholder.svg" alt="Parrillada La Parrilla - chorizo, morcilla, lomo y arepa" width="280" height="180">
+          <h3>Parrillada La Parrilla</h3>
+          <p>Chorizo, morcilla, lomo y arepa.</p>
+          <span class="precio">$35.000</span>
+        </article>
+        <article class="plato">
+          <img loading="lazy" src="images/plato-placeholder.svg" alt="Bandeja paisa - frijoles, arroz, chicharrón, huevo, aguacate" width="280" height="180">
+          <h3>Bandeja paisa</h3>
+          <p>Frijoles, arroz, chicharrón, huevo, aguacate.</p>
+          <span class="precio">$28.000</span>
+        </article>
+        <article class="plato">
+          <img loading="lazy" src="images/plato-placeholder.svg" alt="Sancocho de gallina - con arroz, aguacate y ají casero" width="280" height="180">
+          <h3>Sancocho de gallina</h3>
+          <p>Con arroz, aguacate y ají casero.</p>
+          <span class="precio">$22.000</span>
+        </article>
+        <article class="plato">
+          <img loading="lazy" src="images/plato-placeholder.svg" alt="Lomo al trapo - cocido al carbón, acompañado de papa chorriada" width="280" height="180">
+          <h3>Lomo al trapo</h3>
+          <p>Cocido al carbón, acompañado de papa chorriada.</p>
+          <span class="precio">$45.000</span>
+        </article>
+      </div>
+      <a href="https://wa.me/573178695838" class="btn-whatsapp">Pide tu pedido</a>
+    </section>
+
+    <!-- OPINIONES -->
+    <section id="testimonios" class="seccion">
+      <h2>Opiniones de clientes</h2>
+      <div class="tarjetas">
+        <blockquote class="tarjeta">
+          <p>"La mejor parrillada de Cali, se siente el sabor de la leña."</p>
+          <span class="autor">— Carlos M. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
+        </blockquote>
+        <blockquote class="tarjeta">
+          <p>"Excelente atención y la bandeja paisa está enorme."</p>
+          <span class="autor">— Laura P. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
+        </blockquote>
+        <blockquote class="tarjeta">
+          <p>"Pedí por WhatsApp y llegó a tiempo. Todo muy rico."</p>
+          <span class="autor">— Andrés R. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion seccion-oscura">
+      <h2>Reserva o pide a domicilio</h2>
+      <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
+      <a href="https://wa.me/573178695838" class="btn-whatsapp">Escribir por WhatsApp</a>
+      <p class="telefono"><a href="tel:+573178695838">📞 +57 317 869 5838</a></p>
+      <p class="telefono">📧 <a href="mailto:correo@laparrilla.com">correo@laparrilla.com</a></p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Restaurante La Parrilla · Cali, Colombia</p>
+  </footer>
+
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/whatsapp-float.js"></script>
+</body>
+</html>

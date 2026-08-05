@@ -1,0 +1,218 @@
+/* Componentes base compartidos en todos los sitios */
+
+/* ===== Skip link ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: var(--z-tooltip);
+  background: var(--color-brand);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ===== Navegación ===== */
+.nav {
+  background: var(--color-brand);
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  transition: box-shadow var(--transition-normal), background-color var(--transition-normal);
+}
+
+.nav.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+  max-width: var(--container-max);
+  margin: auto;
+  padding: var(--space-4) var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+.logo:hover { color: var(--color-white); opacity: 90%; }
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+.menu-btn:hover { background: rgb(255 255 255 / 10%); }
+
+.menu {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.menu a {
+  color: rgb(255 255 255 / 90%);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.menu a:hover { color: var(--color-white); text-decoration: underline; }
+
+.menu .btn-wa {
+  color: var(--color-white) !important;
+  text-decoration: none;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--space-12) var(--container-padding);
+}
+.hero-texto { max-width: 700px; }
+.hero h1 { font-size: var(--font-size-4xl); margin-bottom: var(--space-4); color: var(--color-white); }
+.hero p { font-size: var(--font-size-lg); margin-bottom: var(--space-8); line-height: var(--line-height-relaxed); }
+.hero .btn { margin: 0 var(--space-2) var(--space-2); }
+
+/* ===== Botones ===== */
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-8);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-wa {
+  background: var(--color-whatsapp);
+  color: var(--color-white) !important;
+  box-shadow: var(--shadow-md);
+}
+.btn-wa:hover { background: var(--color-whatsapp-hover); }
+
+.btn-out {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+}
+.btn-out:hover { background: rgb(255 255 255 / 15%); }
+
+.btn-brand {
+  background: var(--color-brand);
+  color: var(--color-white) !important;
+}
+.btn-brand:hover { background: var(--color-brand-light); }
+
+.btn-out-dark {
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+  background: transparent;
+}
+.btn-out-dark:hover { background: var(--color-brand); color: var(--color-white) !important; }
+
+/* ===== Secciones ===== */
+.sec { padding: var(--space-16) var(--container-padding); text-align: center; }
+.sec h2 { font-size: var(--font-size-3xl); margin-bottom: var(--space-6); }
+.sec > p { max-width: 700px; margin: 0 auto var(--space-6); color: var(--color-gray-600); }
+.sec .btn { margin-top: var(--space-4); }
+
+.dark {
+  background: var(--color-brand-dark, var(--color-gray-900));
+  color: var(--color-gray-200);
+}
+.dark h2 { color: var(--color-white); }
+.dark .sec > p { color: var(--color-gray-300); }
+
+/* ===== Cards ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  justify-content: center;
+  max-width: var(--container-max);
+  margin: var(--space-8) auto;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  width: 280px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+.card h3 { color: var(--color-brand, var(--color-gray-900)); margin-bottom: var(--space-2); font-size: var(--font-size-lg); }
+.card p { color: var(--color-gray-600); font-size: var(--font-size-sm); margin-bottom: var(--space-2); }
+.dark .card h3 { color: var(--color-gray-900); }
+.dark .card p { color: var(--color-gray-600); }
+.ico { font-size: var(--font-size-3xl); margin-bottom: var(--space-3); display: block; }
+
+/* ===== Precios / variedad ===== */
+.price, .precio { color: var(--color-brand); font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); display: block; }
+
+/* ===== Footer ===== */
+footer {
+  background: var(--color-gray-900);
+  color: var(--color-gray-400);
+  text-align: center;
+  padding: var(--space-6) var(--container-padding);
+  font-size: var(--font-size-sm);
+}
+
+/* ===== Responsive ===== */
+@media (width <= 768px) {
+  .menu-btn { display: block; }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--color-brand);
+    padding: var(--space-4) var(--space-6);
+    gap: var(--space-4);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .menu.abierto { display: flex; }
+  .hero h1 { font-size: var(--font-size-3xl); }
+  .hero { min-height: 60vh; }
+  .card { width: 100%; max-width: 320px; }
+}

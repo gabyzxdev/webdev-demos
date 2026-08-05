@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store — Ropa y accesorios en Cali | Compra por WhatsApp</title>
+  <meta name="description" content="Fashion Store Cali. Ropa de moda, accesorios y calzado. Pide por WhatsApp y recibe en casa en 48 horas.">
+  <meta name="author" content="Fashion Store">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/demo-tienda/">
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=80" fetchpriority="high">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#8e44ad">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Fashion Store — Ropa y accesorios en Cali">
+  <meta property="og:description" content="Ropa de moda, accesorios y calzado. Pide por WhatsApp y recibe en casa en 48 horas.">
+  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/demo-tienda/">
+  <meta property="og:site_name" content="Fashion Store">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80">
+  <meta property="og:image:alt" content="Fachada de Fashion Store">
+  <meta http-equiv="content-language" content="es-CO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fashion Store — Ropa y accesorios en Cali">
+  <meta name="twitter:description" content="Ropa de moda, accesorios y calzado. Pide por WhatsApp y recibe en casa.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80">
+
+  <!-- Icono -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%237b2d8b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white'>F</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%237b2d8b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white'>F</text></svg>">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/variables.css">
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/whatsapp-float.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Fashion Store",
+    "description": "Tienda de ropa de moda, accesorios y calzado en Cali, Colombia.",
+    "telephone": "+573178695838",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cali",
+      "addressRegion": "Valle del Cauca",
+      "addressCountry": "CO"
+    },
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "priceRange": "COP 45000-120000",
+    "sameAs": ["https://wa.me/573178695838"],
+    "image": ["https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80"]
+  }
+  </script>
+</head>
+<body class="theme-tienda">
+  <a href="#inicio" class="skip-link">Saltar al contenido</a>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="logo">Fashion Store</a>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <nav class="menu" id="menu-principal" aria-label="Menú principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#info">Info</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/573178695838" class="btn-wa btn">Pedir por WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>Moda que te hace brillar</h1>
+        <p>Ropa femenina, masculina y accesorios de tendencia. Mira nuestro catálogo, pide por WhatsApp y recibe en Cali.</p>
+        <a href="https://wa.me/573178695838" class="btn btn-wa">Pedir por WhatsApp</a>
+        <a href="#productos" class="btn btn-out">Ver catálogo</a>
+      </div>
+    </section>
+
+    <section id="productos" class="sec">
+      <h2>Catálogo</h2>
+      <div class="cards">
+        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Camiseta urbana de algodón premium" width="280" height="180"><h3>Camiseta urbana</h3><p>Algodón premium, todos los colores.</p><span class="price">$45.000</span></article>
+        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Vestido elegante para toda ocasión" width="280" height="180"><h3>Vestido elegante</h3><p>Perfecto para toda ocasión.</p><span class="price">$89.000</span></article>
+        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Chaqueta casual resistente al agua" width="280" height="180"><h3>Chaqueta</h3><p>Estilo casual, resistente al agua.</p><span class="price">$120.000</span></article>
+        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Conjunto deportivo de línea fitness" width="280" height="180"><h3>Conjunto deportivo</h3><p>Línea fitness, material ligero.</p><span class="price">$99.000</span></article>
+      </div>
+      <a href="https://wa.me/573178695838" class="btn btn-wa">Pedir tu pedido por WhatsApp</a>
+    </section>
+
+    <section id="info" class="sec dark">
+      <h2>¿Por qué comprar con nosotros?</h2>
+      <div class="cards">
+        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73 20 20 0 0 0-8-2 2 2 0 0 1-2 0 20 20 0 0 0-8 2 2 2 0 0 0-1 1.73 2 2 0 0 1 2 2 20 20 0 0 0 8 2 2 2 0 0 1 2 0 20 20 0 0 0 8-2 2 2 0 0 1-2-2V8z"/><circle cx="5.5" cy="15.5" r="1"/><circle cx="18.5" cy="15.5" r="1"/></svg></span><h3>Envíos</h3><p>Entrega en toda Cali. Envíos nacionales con seguimiento.</p></article>
+        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4"/><path d="M3 8h4"/><path d="M17 16v-6"/><path d="M13 10h4"/><path d="M21 12H9"/><path d="M3 16h18"/></svg></span><h3>Cambios</h3><p>Cambios gratis durante los primeros 7 días.</p></article>
+        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h3>WhatsApp</h3><p>Atención en minutos. Resuelve todas tus dudas al instante.</p></article>
+      </div>
+    </section>
+
+    <section id="contacto" class="sec">
+      <h2>Pide tu pedido hoy</h2>
+      <p>Entrega en 48 horas. Pago contra entrega o transferencia.</p>
+      <a href="https://wa.me/573178695838" class="btn btn-wa">Escribir por WhatsApp</a>
+      <p class="contacto" style="margin-top:var(--space-6); color:var(--color-gray-600);"><a href="tel:+573178695838">📞 +57 317 869 5838</a> | 📧 <a href="mailto:ventas@fashionstore.com">ventas@fashionstore.com</a></p>
+    </section>
+  </main>
+
+  <footer class="pie">&copy; 2026 Fashion Store · Cali, Colombia</footer>
+
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/whatsapp-float.js"></script>
+</body>
+</html>

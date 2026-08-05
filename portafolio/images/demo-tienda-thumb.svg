@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#8e44ad"/>
+  <text x="200" y="130" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="white" text-anchor="middle">Fashion Store</text>
+  <text x="200" y="165" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)" text-anchor="middle">Catálogo • Pedidos WhatsApp</text>
+  <text x="200" y="200" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)" text-anchor="middle">HTML5 • CSS3 • JS • Schema.org</text>
+  <rect x="100" y="230" width="200" height="40" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="200" y="255" font-family="system-ui, sans-serif" font-size="14" fill="white" text-anchor="middle">Ver demo →</text>
+</svg>
