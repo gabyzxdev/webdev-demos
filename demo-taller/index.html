@@ -7,12 +7,11 @@
   <meta name="description" content="Taller Mecánico Velozco en Cali. Mecánica general, frenos, suspensión, diagnóstico computarizado y pintura. Pide cita por WhatsApp.">
   <meta name="author" content="Taller Velozco">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/demo-taller/">
+  <link rel="canonical" href="https://gabyzxdev.github.io/webdev-demos/demo-taller/">
 
   <!-- Performance hints -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
@@ -27,7 +26,7 @@
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="Taller Mecánico Velozco — Servicio automotriz en Cali">
   <meta property="og:description" content="Mecánica general, frenos, suspensión, diagnóstico computarizado y pintura. Agenda tu cita por WhatsApp.">
-  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/demo-taller/">
+  <meta property="og:url" content="https://gabyzxdev.github.io/webdev-demos/demo-taller/">
   <meta property="og:site_name" content="Taller Velozco">
   <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80">
   <meta property="og:image:alt" content="Taller mecánico Velozco">
@@ -41,9 +40,6 @@
 
   <!-- Icono -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e67e22'/><text x='50' y='68' font-size='42' text-anchor='middle' fill='white'>⚙</text></svg>">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/variables.css">
@@ -74,65 +70,319 @@
   </script>
 </head>
 <body class="theme-taller">
+
   <a href="#inicio" class="skip-link">Saltar al contenido</a>
 
+  <!-- NAVEGACIÓN -->
   <header class="nav">
     <div class="nav-inner">
       <a href="#inicio" class="logo">Taller Velozco</a>
-      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="menu" id="menu-principal" aria-label="Menú principal">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573178695838" class="btn-wa btn">Agenda cita</a>
+        <a href="https://wa.me/573178695838" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Agendar</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO SPLIT -->
     <section id="inicio" class="hero">
-      <div class="hero-texto">
-        <h1>Tu carro en las mejores manos</h1>
-        <p>Mecánica general, pintura, frenos y más. 15 años de experiencia en Cali. Pide tu cita por WhatsApp en segundos.</p>
-        <a href="https://wa.me/573178695838" class="btn btn-wa">Agendar cita</a>
-        <a href="#servicios" class="btn btn-out">Ver servicios</a>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80');"></div>
+      
+      <div class="hero-split">
+        <div class="hero-content">
+          <span class="hero-badge">🏆 15 años de experiencia</span>
+          <h1>Tu carro en las <span class="hero-gradient-text">mejores manos</span></h1>
+          <p>Mecánica general, pintura, frenos, suspensión y diagnóstico. 15 años en Cali. Cotización en 10 min por WhatsApp.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Agendar cita</a>
+            <a href="#servicios" class="btn btn-out btn-lg">Ver servicios</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="15">15</div>
+              <div class="hero-stat__label">Años experiencia</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="6">6</div>
+              <div class="hero-stat__label">Meses garantía</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="10">10</div>
+              <div class="hero-stat__label">Min cotización</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Taller Mecánico Velozco - mecánico trabajando" width="600" height="500">
+        </div>
       </div>
     </section>
 
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- SERVICIOS CON CERTIFICACIONES -->
     <section id="servicios" class="sec">
-      <h2>Nuestros servicios</h2>
-      <div class="cards">
-        <article class="card"><img loading="lazy" src="images/herramienta-placeholder.svg" alt="Mecánica general - revisión y reparación de motor" width="280" height="180"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><h3>Mecánica general</h3><p>Revisión, ajustes y reparación de motor, transmisión y sistema eléctrico.</p><span class="precio">Desde $80.000</span></article>
-        <article class="card"><img loading="lazy" src="images/herramienta-placeholder.svg" alt="Frenos - cambio de pastillas y discos" width="280" height="180"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3>Frenos</h3><p>Cambio de pastillas, discos y revisión completa para tu seguridad.</p><span class="precio">Desde $60.000</span></article>
-        <article class="card"><img loading="lazy" src="images/herramienta-placeholder.svg" alt="Pintura - completa o parcial con horno" width="280" height="180"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="M15 5l4 4"/></svg></span><h3>Pintura</h3><p>Pintura completa o parcial, con horno de secado y colorimetría.</p><span class="precio">Desde $350.000</span></article>
-        <article class="card"><img loading="lazy" src="images/herramienta-placeholder.svg" alt="Diagnóstico - escáner computarizado" width="280" height="180"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span><h3>Diagnóstico</h3><p>Escáner computarizado. Detecta fallas antes de que empeoren.</p><span class="precio">Desde $40.000</span></article>
+      <div class="sec-header">
+        <span class="sec-badge">Nuestros servicios</span>
+        <h2>Servicios automotrices completos</h2>
+        <p>Equipo certificado, tecnología de punta y repuestos originales. Garantía de 6 meses en todo.</p>
       </div>
-      <a href="https://wa.me/573178695838" class="btn btn-wa">Solicitar presupuesto gratis</a>
+
+      <div class="cards">
+        <article class="card card--featured">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1622931969327-3b4e6c5c3d4e?w=600&q=80" alt="Mecánica general - motor" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Mecánica</span>
+            <h3>Mecánica general</h3>
+            <p>Revisión, ajustes y reparación de motor, transmisión y sistema eléctrico.</p>
+            <div class="card-footer">
+              <span class="card-price">Desde $80.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20Mec%C3%A1nica%20general" class="card-link">Cotizar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+          <div class="card-badges">
+            <span class="badge badge-brand">Certificado</span>
+            <span class="badge badge-brand">6 meses</span>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1622931969327-3b4e6c5c3d4e?w=600&q=80" alt="Frenos - pastillas y discos" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Frenos</span>
+            <h3>Frenos completos</h3>
+            <p>Cambio de pastillas, discos, líquido y revisión ABS para tu seguridad.</p>
+            <div class="card-footer">
+              <span class="card-price">Desde $60.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20Frenos%20completos" class="card-link">Cotizar</a>
+            </div>
+          </div>
+          <div class="card-badges">
+            <span class="badge badge-brand">Certificado</span>
+            <span class="badge badge-success">Seguridad</span>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1622931969327-3b4e6c5c3d4e?w=600&q=80" alt="Pintura - horno" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Pintura</span>
+            <h3>Pintura automotriz</h3>
+            <p>Pintura completa o parcial, horno de secado, colorimetría computarizada.</p>
+            <div class="card-footer">
+              <span class="card-price">Desde $350.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20Pintura%20automotriz" class="card-link">Cotizar</a>
+            </div>
+          </div>
+          <div class="card-badges">
+            <span class="badge badge-brand">Horno</span>
+            <span class="badge badge-warning">Colorimetría</span>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1622931969327-3b4e6c5c3d4e?w=600&q=80" alt="Diagnóstico - escáner" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Diagnóstico</span>
+            <h3>Diagnóstico computarizado</h3>
+            <p>Escáner profesional OBD2. Detecta fallas antes de que empeoren.</p>
+            <div class="card-footer">
+              <span class="card-price">Desde $40.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20agendar%20Diagn%C3%B3stico%20computarizado" class="card-link">Agendar</a>
+            </div>
+          </div>
+          <div class="card-badges">
+            <span class="badge badge-brand">OBD2</span>
+            <span class="badge badge-info">Escáner pro</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="nosotros" class="sec dark">
-      <h2>¿Por qué elegirnos?</h2>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- NOSOTROS - CERTIFICACIONES Y CONFIANZA -->
+    <section id="nosotros" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">Por qué elegirnos</span>
+        <h2>Confianza y calidad garantizada</h2>
+        <p>Más de 15 años sirviendo a Cali. Certificaciones que avalan nuestro trabajo.</p>
+      </div>
+
       <div class="cards">
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3>Rápidos</h3><p>Cotización en 10 minutos por WhatsApp. Reparación en tiempo récord.</p></article>
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><h3>Garantía</h3><p>Garantía de 6 meses en todas las reparaciones.</p></article>
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Cerca de ti</h3><p>Estamos en Cali, zona industrial. Fácil acceso.</p></article>
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <h3>Cotización en 10 min</h3>
+            <p>Envíanos tu modelo por WhatsApp. Te respondemos con precio, tiempo y disponibilidad.</p>
+          </div>
+        </article>
+        
+        <article class="card card--featured">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <h3>Garantía 6 meses</h3>
+            <p>Todas nuestras reparaciones tienen garantía escrita de 6 meses. Tu tranquilidad primero.</p>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3>Cerca de ti</h3>
+            <p>Cra 15 #45-60, Zona Industrial, Cali. Fácil acceso, parqueadero amplio.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Certificaciones -->
+      <div style="margin-top: var(--space-16); text-align: center;">
+        <h3 style="font-size:var(--fs-xl);margin-bottom:var(--space-8);color:var(--color-white)">Certificaciones y alianzas</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);justify-content:center;align-items:center;opacity:0.7">
+          <span style="font-weight:600;color:var(--color-white)">ISO 9001</span>
+          <span style="font-weight:600;color:var(--color-white)">ASE Certified</span>
+          <span style="font-weight:600;color:var(--color-white)">Repuestos Originales</span>
+          <span style="font-weight:600;color:var(--color-white)">Garantía 6 Meses</span>
+        </div>
       </div>
     </section>
 
-    <section id="contacto" class="sec">
-      <h2>Agenda tu cita hoy</h2>
-      <div class="cta-block" style="max-width:520px; margin:var(--space-4) auto;">
-        <p style="color:var(--color-gray-600); margin-bottom:var(--space-6);">Envíanos tu modelo de carro y el servicio que necesitas. Te respondemos con precio, tiempo y disponibilidad en minutos.</p>
-        <a href="https://wa.me/573178695838" class="btn btn-wa">Escribir por WhatsApp</a>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" data-target="15">15</div>
+        <div class="stat-label">Años de experiencia</div>
       </div>
-      <p style="margin-top:var(--space-6); color:var(--color-gray-600);"><a href="tel:+573178695838">📞 +57 317 869 5838</a> | 📧 <a href="mailto:tallervelozco@email.com">tallervelozco@email.com</a> | Cra 15 #45-60, Cali</p>
+      <div class="stat-item">
+        <div class="stat-number" data-target="6">6</div>
+        <div class="stat-label">Meses garantía</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="10">10</div>
+        <div class="stat-label">Min cotización</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="5000">5000</div>
+        <div class="stat-label">Carros atendidos</div>
+      </div>
+    </div>
+
+    <!-- CONTACTO CON CTA STICKY -->
+    <section id="contacto" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">Agenda tu cita</span>
+        <h2>Agenda tu cita hoy</h2>
+        <p>Envíanos tu modelo de carro y el servicio que necesitas. Te respondemos en minutos.</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg btn-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Agendar cita por WhatsApp</a>
+        
+        <div style="margin-top: var(--space-8); padding: var(--space-6); background: rgba(255,255,255,0.05); border-radius: var(--radius-xl); border: 1px solid var(--glass-border);">
+          <h3 style="color:var(--color-white);margin-bottom:var(--space-4);font-size:var(--fs-lg)">¿Qué incluye tu cita?</h3>
+          <ul style="text-align:left;display:inline-block;gap:var(--space-3);color:var(--color-gray-300);line-height:2">
+            <li>✓ Diagnóstico inicial gratis</li>
+            <li>✓ Cotización detallada por escrito</li>
+            <li>✓ Sin compromiso de reparar</li>
+            <li>✓ Reserva de horario prioritario</li>
+          </ul>
+        </div>
+        
+        <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg btn-block" style="margin-top:var(--space-6)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Agendar mi cita gratis</a>
+        
+        <div style="margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: center; color: var(--color-gray-300); font-size: var(--fs-base);">
+          <a href="tel:+573178695838" style="color: inherit; text-decoration: underline;">📞 +57 317 869 5838</a>
+          <a href="mailto:tallervelozco@email.com" style="color: inherit; text-decoration: underline;">📧 tallervelozco@email.com</a>
+          <span>📍 Cra 15 #45-60, Zona Industrial, Cali</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="pie">&copy; 2026 Taller Velozco · Cali, Colombia</footer>
+  <!-- FOOTER v2 -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="footer-logo">Taller Velozco</a>
+        <p class="footer-tagline">Tu taller de confianza en Cali. 15 años, garantía 6 meses, repuestos originales.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/573178695838" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Servicios</h3>
+        <nav class="footer-links">
+          <a href="#servicios">Mecánica general</a>
+          <a href="#servicios">Frenos</a>
+          <a href="#servicios">Pintura</a>
+          <a href="#servicios">Diagnóstico</a>
+        </nav>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Garantías</h3>
+        <nav class="footer-links">
+          <a href="#">6 meses reparaciones</a>
+          <a href="#">Repuestos originales</a>
+          <a href="#">Diagnóstico gratis</a>
+          <a href="#">Cotización sin compromiso</a>
+        </nav>
+      </div>
+      
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+573178695838">+57 317 869 5838</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:tallervelozco@email.com">tallervelozco@email.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Cra 15 #45-60, Zona Industrial, Cali</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Taller Velozco · Cali, Colombia</p>
+      <p class="footer-made">Hecho con <strong>🧡</strong> en Cali por <a href="https://gabyzxdev.github.io/webdev-demos/portafolio/" target="_blank" rel="noopener">Angel Gabriel Campo</a></p>
+    </div>
+  </footer>
 
   <script src="../shared/nav.js"></script>
+  <script src="../shared/scroll-reveal.js"></script>
+  <script src="../shared/carousel.js"></script>
   <script src="../shared/whatsapp-float.js"></script>
 </body>
 </html>

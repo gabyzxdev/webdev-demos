@@ -7,17 +7,16 @@
   <meta name="description" content="Portafolio de Angel Gabriel Campo, desarrollador web en Cali, Colombia. Páginas web modernas, rápidas y responsivas para negocios locales. Cotiza gratis por WhatsApp.">
   <meta name="author" content="Angel Gabriel Campo">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/portafolio/">
+  <link rel="canonical" href="https://gabyzxdev.github.io/webdev-demos/portafolio/">
 
   <!-- Performance hints -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="images/hero-placeholder.svg" fetchpriority="high">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80" fetchpriority="high">
 
   <!-- Theme color -->
   <meta name="theme-color" content="#0f172a">
@@ -27,9 +26,9 @@
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="Angel Gabriel Campo — Desarrollo Web en Cali">
   <meta property="og:description" content="Páginas web modernas, rápidas y listas para celular que ayudan a negocios locales a vender más.">
-  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/portafolio/">
+  <meta property="og:url" content="https://gabyzxdev.github.io/webdev-demos/portafolio/">
   <meta property="og:site_name" content="Angel Gabriel Campo — Desarrollo Web">
-  <meta property="og:image" content="https://gabyzxdev.github.io/WebDev/portafolio/images/hero-placeholder.svg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80">
   <meta property="og:image:alt" content="Portafolio de desarrollo web Angel Gabriel Campo">
   <meta http-equiv="content-language" content="es-CO">
 
@@ -37,13 +36,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Angel Gabriel Campo — Desarrollo Web en Cali">
   <meta name="twitter:description" content="Páginas web modernas, rápidas y listas para celular para negocios locales.">
-  <meta name="twitter:image" content="https://gabyzxdev.github.io/WebDev/portafolio/images/hero-placeholder.svg">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80">
 
   <!-- Icono -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white'></></text></svg>">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/variables.css">
@@ -69,99 +65,418 @@
     "areaServed": "Cali, Colombia",
     "priceRange": "COP 400000-1200000",
     "sameAs": ["https://wa.me/573178695838"],
-    "image": ["https://gabyzxdev.github.io/WebDev/portafolio/images/hero-placeholder.svg"]
+    "image": ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80"]
   }
   </script>
 </head>
 <body class="theme-portafolio">
+
   <a href="#trabajos" class="skip-link">Saltar al contenido</a>
 
+  <!-- NAVEGACIÓN -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="logo">Angel Gabriel Campo</a>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Menú principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#trabajos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="https://wa.me/573178695838" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Cotizar</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section class="hero">
-      <div class="hero-texto">
-        <h1>Angel Gabriel Campo</h1>
-        <p class="sub" style="color:#38bdf8; font-size:var(--font-size-xl); font-weight:var(--font-weight-semibold); margin-bottom:var(--space-4);">Desarrollo páginas web para negocios</p>
-        <p style="max-width:600px; margin:0 auto var(--space-8); opacity:0.85;">Creo sitios web modernos, rápidos y listos para celular que ayudan a negocios locales a vender más. Mira mis demos y escríbeme para conversar.</p>
-        <a href="https://wa.me/573178695838" class="btn btn-wa">Escríbeme por WhatsApp</a>
+    <!-- HERO SPLIT -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80');"></div>
+      
+      <div class="hero-split">
+        <div class="hero-content">
+          <span class="hero-badge">🚀 Desarrollador Web Freelance — Cali</span>
+          <h1>Angel Gabriel <span class="hero-gradient-text">Campo</span></h1>
+          <p>Creo sitios web modernos, rápidos y listos para celular que ayudan a negocios locales a vender más. Diseño propio, código limpio, resultados reales.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Cotiza gratis por WhatsApp</a>
+            <a href="#trabajos" class="btn btn-out btn-lg">Ver proyectos</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="15">15</div>
+              <div class="hero-stat__label">Proyectos entregados</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="98">98</div>
+              <div class="hero-stat__label">% Satisfacción</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="100">100</div>
+              <div class="hero-stat__label">% Responsive</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Desarrollador trabajando en código" width="600" height="500">
+        </div>
       </div>
     </section>
 
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="sec">
+      <div class="sec-header">
+        <span class="sec-badge">Servicios</span>
+        <h2>Qué hago por tu negocio</h2>
+        <p>Soluciones completas: desde la idea hasta el despliegue y mantenimiento.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card card--featured">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+            <h3>Web corporativa</h3>
+            <p>Sitios institucionales, landing pages, blogs. SEO técnico, velocidad, accesibilidad.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20una%20web%20corporativa" class="card-link">Cotizar</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>E-commerce / Catálogo</h3>
+            <p>Tiendas online, catálogos con WhatsApp, pasarelas de pago, gestión de pedidos.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20un%20e-commerce" class="card-link">Cotizar</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <h3>Sistemas a medida</h3>
+            <p>Dashboards, CRM, paneles admin, automatizaciones. Vanilla JS, sin frameworks pesados.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20cotizar%20un%20sistema%20a%20medida" class="card-link">Cotizar</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <h3>Mantenimiento & SEO</h3>
+            <p>Actualizaciones, backups, monitoreo, Core Web Vitals, SEO técnico continuo.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20mantenimiento%20y%20SEO" class="card-link">Cotizar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- PROYECTOS - CASE STUDIES -->
     <section id="trabajos" class="sec">
-      <h2>Mis trabajos de muestra</h2>
-      <p>Aquí tienes tres ejemplos de lo que puedo hacer para ti. Cada uno está hecho con diseño propio, adaptado a celulares y enfocado en ventas.</p>
+      <div class="sec-header">
+        <span class="sec-badge">Case Studies</span>
+        <h2>Proyectos destacados</h2>
+        <p>Tres ejemplos reales: cada uno resolvió un problema de negocio específico.</p>
+      </div>
 
-      <div class="demos">
-        <article class="demo">
-          <img loading="lazy" src="images/demo-restaurante-thumb.svg" alt="Vista previa de la página del Restaurante La Parrilla" width="320" height="200">
-          <div class="body">
+      <div class="demo-case-studies">
+        <!-- Restaurante -->
+        <article class="case-study">
+          <div class="case-study-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80" alt="Restaurante La Parrilla - vista del sitio web" width="600" height="400">
+            <div class="case-study-overlay">
+              <a href="../demo-restaurante/index.html" target="_blank" rel="noopener" class="btn btn-wa btn-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Ver demo</a>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <span class="case-study-tag badge badge-brand">Restaurante</span>
             <h3>Restaurante La Parrilla</h3>
-            <p>Página completa para restaurante: menú, horarios, reseñas y pedidos por WhatsApp.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JS</span><span class="tech-tag">WhatsApp</span><span class="tech-tag">Schema.org</span>
+            <p class="case-study-desc">Web completa para restaurante tradicional: menú interactivo, pedidos por WhatsApp, galería de platos, reseñas y reserva de mesas.</p>
+            
+            <div class="case-study-metrics">
+              <div class="metric">
+                <span class="metric-value" data-target="40">40</span>
+                <span class="metric-label">% más pedidos</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="3">3</span>
+                <span class="metric-label">min pedido promedio</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="95">95</span>
+                <span class="metric-label">% mobile</span>
+              </div>
             </div>
-            <a href="../demo-restaurante/index.html" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            
+            <div class="case-study-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">Vanilla JS</span>
+              <span class="tech-badge">WhatsApp API</span>
+              <span class="tech-badge">Schema.org</span>
+              <span class="tech-badge">SEO Local</span>
+            </div>
+            
+            <a href="../demo-restaurante/index.html" target="_blank" rel="noopener" class="btn btn-out btn-sm">Ver caso completo →</a>
           </div>
         </article>
 
-        <article class="demo">
-          <img loading="lazy" src="images/demo-tienda-thumb.svg" alt="Vista previa de la página de la tienda Fashion Store" width="320" height="200">
-          <div class="body">
+        <!-- Tienda -->
+        <article class="case-study">
+          <div class="case-study-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Fashion Store - catálogo online" width="600" height="400">
+            <div class="case-study-overlay">
+              <a href="../demo-tienda/index.html" target="_blank" rel="noopener" class="btn btn-wa btn-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Ver demo</a>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <span class="case-study-tag badge badge-brand">E-commerce</span>
             <h3>Fashion Store</h3>
-            <p>Tienda online con catálogo de productos, precios y pedidos a domicilio. Dirigido a moda.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JS</span><span class="tech-tag">WhatsApp</span><span class="tech-tag">Schema.org</span>
+            <p class="case-study-desc">Catálogo online para tienda de moda: filtros por categoría, carrito persistente, checkout por WhatsApp, gestión de tallas y colores.</p>
+            
+            <div class="case-study-metrics">
+              <div class="metric">
+                <span class="metric-value" data-target="65">65</span>
+                <span class="metric-label">% conversión mobile</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="48">48</span>
+                <span class="metric-label">h entrega Cali</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="7">7</span>
+                <span class="metric-label">días cambios gratis</span>
+              </div>
             </div>
-            <a href="../demo-tienda/index.html" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            
+            <div class="case-study-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">Vanilla JS</span>
+              <span class="tech-badge">WhatsApp Checkout</span>
+              <span class="tech-badge">Filtros JS</span>
+              <span class="tech-badge">LocalStorage</span>
+            </div>
+            
+            <a href="../demo-tienda/index.html" target="_blank" rel="noopener" class="btn btn-out btn-sm">Ver caso completo →</a>
           </div>
         </article>
 
-        <article class="demo">
-          <img loading="lazy" src="images/demo-taller-thumb.svg" alt="Vista previa de la página del Taller Mecánico Velozco" width="320" height="200">
-          <div class="body">
+        <!-- Taller -->
+        <article class="case-study">
+          <div class="case-study-visual">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Taller Velozco - servicios y agendamiento" width="600" height="400">
+            <div class="case-study-overlay">
+              <a href="../demo-taller/index.html" target="_blank" rel="noopener" class="btn btn-wa btn-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Ver demo</a>
+            </div>
+          </div>
+          <div class="case-study-content">
+            <span class="case-study-tag badge badge-brand">Servicios</span>
             <h3>Taller Velozco</h3>
-            <p>Sitio para taller mecánico: servicios, precios, agendar cita y atención inmediata.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JS</span><span class="tech-tag">WhatsApp</span><span class="tech-tag">Schema.org</span>
+            <p class="case-study-desc">Web para taller mecánico: catálogo de servicios con precios, agendamiento por WhatsApp, certificaciones, galería de trabajos y cotización instantánea.</p>
+            
+            <div class="case-study-metrics">
+              <div class="metric">
+                <span class="metric-value" data-target="10">10</span>
+                <span class="metric-label">min cotización</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="6">6</span>
+                <span class="metric-label">meses garantía</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value" data-target="98">98</span>
+                <span class="metric-label">% satisfacción</span>
+              </div>
             </div>
-            <a href="../demo-taller/index.html" target="_blank" rel="noopener noreferrer">Ver demo →</a>
+            
+            <div class="case-study-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">Vanilla JS</span>
+              <span class="tech-badge">WhatsApp Citas</span>
+              <span class="tech-badge">Certificaciones</span>
+              <span class="tech-badge">SEO Local</span>
+            </div>
+            
+            <a href="../demo-taller/index.html" target="_blank" rel="noopener" class="btn btn-out btn-sm">Ver caso completo →</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="cta" style="background:var(--color-gray-900); color:var(--color-gray-200); padding:var(--space-16) var(--container-padding); text-align:center;">
-      <h2 style="color:#38bdf8; margin-bottom:var(--space-4);">¿Quieres una web así para tu negocio?</h2>
-      <p style="max-width:600px; margin:0 auto var(--space-8); opacity:0.8;">Te hago una propuesta clara: precio fijo y entrega en pocos días. Sin sorpresas.</p>
-      <div class="info-row" style="display:flex; flex-wrap:wrap; gap:var(--space-4); justify-content:center; margin-bottom:var(--space-8);">
-        <span style="color:var(--color-gray-300);"><a href="tel:+573178695838" style="color:inherit; text-decoration:underline;">📱 +57 317 869 5838</a></span>
-        <span style="color:var(--color-gray-300);"><a href="mailto:gabyzx.dev@gmail.com" style="color:inherit; text-decoration:underline;">📧 gabyzx.dev@gmail.com</a></span>
-        <span style="color:var(--color-gray-300);">📍 Cali, Colombia</span>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="sec sec--alt">
+      <div class="sec-header">
+        <span class="sec-badge">Sobre mí</span>
+        <h2>Hola, soy Angel Gabriel</h2>
+        <p>Desarrollador web apasionado por crear soluciones que venden. 3 años ayudando a negocios de Cali a crecer online.</p>
       </div>
-      <a href="https://wa.me/573178695838" class="btn btn-wa">Contáctame por WhatsApp</a>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <h3>Código limpio y mantenible</h3>
+            <p>Vanilla JS, CSS moderno, sin frameworks pesados. Código que entiendes y escalas.</p>
+          </div>
+        </article>
+        
+        <article class="card card--featured">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>Enfoque en ventas</h3>
+            <p>Cada línea de código piensa en conversión: WhatsApp, formularios, CTAs estratégicos.</p>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <h3>Entrega rápida y garantía</h3>
+            <p>Proyectos en 7-14 días. 30 días de soporte gratis. Código documentado y escalable.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Tech Stack Global -->
-    <section class="sec" style="background:var(--color-gray-50);">
-      <h2>Tecnologías que uso</h2>
-      <p>Stack moderno, ligero y sin dependencias innecesarias para máxima velocidad y SEO.</p>
-      <div class="tech-stack" style="display:flex; flex-wrap:wrap; gap:var(--space-3); justify-content:center; margin-top:var(--space-8);">
-        <span class="tech-badge">HTML5 Semántico</span>
-        <span class="tech-badge">CSS3 (Custom Props)</span>
-        <span class="tech-badge">Vanilla JS (ES6+)</span>
-        <span class="tech-badge">Schema.org JSON-LD</span>
-        <span class="tech-badge">Open Graph / Twitter Cards</span>
-        <span class="tech-badge">WebP / SVG Optimizado</span>
-        <span class="tech-badge">Lazy Loading Nativo</span>
-        <span class="tech-badge">GitHub Pages + Cloudflare</span>
-        <span class="tech-badge">Accesibilidad WCAG 2.1 AA</span>
-        <span class="tech-badge">Core Web Vitals Optimizado</span>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" data-target="15">15</div>
+        <div class="stat-label">Proyectos entregados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="98">98</div>
+        <div class="stat-label">% Satisfacción</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="14">14</div>
+        <div class="stat-label">Días promedio entrega</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100">100</div>
+        <div class="stat-label">% Responsive</div>
+      </div>
+    </div>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">¿Empezamos?</span>
+        <h2>¿Listo para tu nueva web?</h2>
+        <p>Conversemos sobre tu proyecto. Sin compromiso, solo ideas y una cotización clara.</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg btn-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Cotiza tu web gratis por WhatsApp</a>
+        
+        <div style="margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: center; color: var(--color-gray-300); font-size: var(--fs-base);">
+          <a href="tel:+573178695838" style="color: inherit; text-decoration: underline;">📱 +57 317 869 5838</a>
+          <a href="mailto:gabyzx.dev@gmail.com" style="color: inherit; text-decoration: underline;">📧 gabyzx.dev@gmail.com</a>
+          <span>📍 Cali, Colombia</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>&copy; 2026 Angel Gabriel Campo — Desarrollo Web · Cali, Colombia</footer>
+  <!-- FOOTER v2 -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="footer-logo">Angel Gabriel Campo</a>
+        <p class="footer-tagline">Desarrollador Web Freelance — Cali, Colombia. Páginas web que venden.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/573178695838" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+          <a href="https://github.com/gabyzxdev" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5 5 0 0 0 15 0 5 5 0 0 0 10 4.77a5.44 5.44 0 0 0-5 5c0 3.5 3.27 6.61 6.44 7A3.37 3.37 0 0 0 18 19.13v.87"/></svg></a>
+          <a href="https://linkedin.com/in/gabyzxdev" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 1-2-2V8a2 2 0 0 0-2-2 2 2 0 0 1 2-2h2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Servicios</h3>
+        <nav class="footer-links">
+          <a href="#servicios">Web corporativa</a>
+          <a href="#servicios">E-commerce / Catálogo</a>
+          <a href="#servicios">Sistemas a medida</a>
+          <a href="#servicios">Mantenimiento & SEO</a>
+        </nav>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Proyectos</h3>
+        <nav class="footer-links">
+          <a href="../demo-restaurante/index.html">Restaurante La Parrilla</a>
+          <a href="../demo-tienda/index.html">Fashion Store</a>
+          <a href="../demo-taller/index.html">Taller Velozco</a>
+        </nav>
+      </div>
+      
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+573178695838">+57 317 869 5838</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:gabyzx.dev@gmail.com">gabyzx.dev@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Cali, Colombia</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Angel Gabriel Campo — Desarrollo Web · Cali, Colombia</p>
+      <p class="footer-made">Hecho con <strong>💙</strong> en Cali por Angel Gabriel Campo</p>
+    </div>
+  </footer>
 
   <script src="../shared/nav.js"></script>
+  <script src="../shared/scroll-reveal.js"></script>
+  <script src="../shared/carousel.js"></script>
   <script src="../shared/whatsapp-float.js"></script>
 </body>
 </html>

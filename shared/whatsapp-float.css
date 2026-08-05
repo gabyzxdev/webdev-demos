@@ -1,4 +1,6 @@
-/* WhatsApp Flotante + Modal Cotización */
+/* ==========================================================================
+   WHATSAPP FLOAT PREMIUM - Expandable button, pulse rings, modal
+   ========================================================================== */
 
 .whatsapp-float {
   position: fixed;
@@ -11,26 +13,75 @@
   gap: var(--space-3);
 }
 
-.whatsapp-float__btn {
+/* Pulse rings */
+.whatsapp-float::before,
+.whatsapp-float::after {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
   width: 64px;
   height: 64px;
   border-radius: var(--radius-full);
-  background: var(--color-whatsapp);
+  border: 2px solid var(--color-whatsapp);
+  opacity: 0;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.whatsapp-float::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(50%, 50%) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(50%, 50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+.whatsapp-float__btn {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-whatsapp);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-whatsapp);
   cursor: pointer;
   border: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
-  animation: whatsapp-pulse 2s infinite;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  overflow: hidden;
+}
+
+.whatsapp-float__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: inherit;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform var(--transition-normal), opacity var(--transition-fast);
+}
+
+.whatsapp-float__btn:active::before {
+  transform: scale(2.5);
+  opacity: 1;
+  transition: transform 0ms, opacity 0ms;
 }
 
 .whatsapp-float__btn:hover {
-  background: var(--color-whatsapp-hover);
-  transform: scale(1.1);
-  box-shadow: var(--shadow-xl);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgba(37, 211, 102, 0.2);
 }
 
 .whatsapp-float__btn:focus-visible {
@@ -39,36 +90,55 @@
 }
 
 .whatsapp-float__btn svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
 }
 
-@keyframes whatsapp-pulse {
-  0% { box-shadow: 0 0 0 0 rgb(37 211 102 / 40%); }
-  70% { box-shadow: 0 0 0 16px rgb(37 211 102 / 0%); }
-  100% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0%); }
+.whatsapp-float__btn:hover svg {
+  transform: scale(1.1) rotate(5deg);
 }
 
-.whatsapp-float__tooltip {
+/* Expandable label */
+.whatsapp-float__label {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: var(--space-3);
+  padding: var(--space-2) var(--space-4);
   background: var(--color-gray-900);
   color: var(--color-white);
-  padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
-  font-size: var(--font-size-sm);
+  font-size: var(--fs-sm);
   font-weight: var(--font-weight-medium);
   white-space: nowrap;
-  opacity: 0%;
-  transform: translateX(10px);
+  opacity: 0;
+  transform: translateY(-50%) translateX(10px) scale(0.9);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
   pointer-events: none;
+  z-index: -1;
 }
 
-.whatsapp-float:hover .whatsapp-float__tooltip {
-  opacity: 100%;
-  transform: translateX(0);
+.whatsapp-float__label::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--color-gray-900);
 }
 
-/* Modal Cotización */
+.whatsapp-float:hover .whatsapp-float__label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* ==========================================================================
+   MODAL PREMIUM
+   ========================================================================== */
 .quote-modal {
   position: fixed;
   inset: 0;
@@ -86,26 +156,40 @@
 .quote-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgb(0 0 0 / 60%);
-  backdrop-filter: blur(4px);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .quote-modal__content {
   position: relative;
   background: var(--color-white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   padding: var(--space-8);
   width: 100%;
   max-width: 480px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: var(--shadow-xl);
-  animation: modal-in var(--transition-normal);
+  box-shadow: var(--shadow-2xl);
+  animation: modal-in var(--transition-bounce);
+  border: 1px solid var(--color-gray-100);
 }
 
 @keyframes modal-in {
-  from { opacity: 0%; transform: translateY(20px) scale(0.95); }
-  to { opacity: 100%; transform: translateY(0) scale(1); }
+  from { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
 }
 
 .quote-modal__header {
@@ -113,18 +197,24 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-gray-100);
 }
 
 .quote-modal__title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-2xl);
+  font-weight: var(--font-weight-extrabold);
   color: var(--color-gray-900);
   margin: 0;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .quote-modal__close {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
   background: var(--color-gray-100);
   color: var(--color-gray-600);
@@ -133,16 +223,17 @@
   justify-content: center;
   border: none;
   cursor: pointer;
-  transition: background-color var(--transition-fast), color var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .quote-modal__close:hover {
-  background: var(--color-gray-200);
-  color: var(--color-gray-900);
+  background: var(--color-brand)15;
+  color: var(--color-brand);
+  transform: rotate(90deg);
 }
 
 .quote-modal__close:focus-visible {
-  outline: 2px solid var(--color-secondary);
+  outline: 3px solid var(--color-brand);
   outline-offset: 2px;
 }
 
@@ -154,38 +245,49 @@
 .quote-modal__form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .quote-modal__field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-1.5);
 }
 
 .quote-modal__label {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-gray-700);
+}
+
+.quote-modal__label svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-brand);
+  flex-shrink: 0;
 }
 
 .quote-modal__input,
 .quote-modal__select {
   padding: var(--space-3) var(--space-4);
   border: 2px solid var(--color-gray-200);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-base);
   font-family: inherit;
   color: var(--color-gray-900);
   background: var(--color-white);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
 .quote-modal__input:focus,
 .quote-modal__select:focus {
   outline: none;
   border-color: var(--color-brand);
-  box-shadow: 0 0 0 3px rgba(var(--color-brand-rgb, 30, 58, 95), 0.15);
+  box-shadow: 0 0 0 4px rgb(var(--color-brand-rgb) / 0.15);
+  background: var(--color-white);
 }
 
 .quote-modal__input::placeholder {
@@ -198,36 +300,54 @@
   font-family: inherit;
 }
 
+.quote-modal__input.error,
+.quote-modal__select.error {
+  border-color: var(--color-error);
+}
+
+.quote-modal__error {
+  font-size: var(--fs-xs);
+  color: var(--color-error);
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.quote-modal__error.visible {
+  display: flex;
+}
+
 .quote-modal__submit {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
   padding: var(--space-4) var(--space-8);
-  background: var(--color-whatsapp);
+  background: var(--gradient-whatsapp);
   color: var(--color-white);
   border: none;
   border-radius: var(--radius-full);
-  font-size: var(--font-size-base);
+  font-size: var(--fs-base);
   font-weight: var(--font-weight-bold);
   font-family: inherit;
   cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
+  width: 100%;
 }
 
-.quote-modal__submit:hover {
-  background: var(--color-whatsapp-hover);
-  transform: translateY(-1px);
+.quote-modal__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgba(37, 211, 102, 0.2);
 }
 
 .quote-modal__submit:focus-visible {
-  outline: 2px solid var(--color-whatsapp);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-whatsapp);
+  outline-offset: 3px;
 }
 
 .quote-modal__submit:disabled {
-  opacity: 60%;
+  opacity: 0.6;
   cursor: not-allowed;
   transform: none;
 }
@@ -237,16 +357,87 @@
   height: 20px;
 }
 
+.quote-modal__submit .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: none;
+}
+
+.quote-modal__submit.loading .spinner {
+  display: block;
+}
+
+.quote-modal__submit.loading .btn-text {
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .quote-modal__note {
-  font-size: var(--font-size-xs);
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   text-align: center;
-  margin: 0;
+  margin: var(--space-4) 0 0;
 }
 
 .quote-modal__note a {
   color: var(--color-brand);
   text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Success state */
+.quote-modal__success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8);
+  animation: fade-in-scale 0.5s var(--transition-bounce);
+}
+
+.quote-modal__success.visible {
+  display: flex;
+}
+
+.quote-modal__success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-success)15;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+  animation: fade-in-scale 0.6s var(--transition-bounce) 0.2s both;
+}
+
+.quote-modal__success-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--color-success);
+}
+
+.quote-modal__success h3 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.quote-modal__success p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.quote-modal__success .btn {
+  width: auto;
 }
 
 /* Mobile adjustments */
@@ -261,8 +452,15 @@
     height: 56px;
   }
 
+  .whatsapp-float::before,
+  .whatsapp-float::after {
+    width: 56px;
+    height: 56px;
+  }
+
   .quote-modal__content {
     padding: var(--space-6);
     margin: var(--space-4);
+    border-radius: var(--radius-xl);
   }
 }

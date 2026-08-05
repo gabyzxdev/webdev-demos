@@ -7,12 +7,11 @@
   <meta name="description" content="Fashion Store Cali. Ropa de moda, accesorios y calzado. Pide por WhatsApp y recibe en casa en 48 horas.">
   <meta name="author" content="Fashion Store">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/demo-tienda/">
+  <link rel="canonical" href="https://gabyzxdev.github.io/webdev-demos/demo-tienda/">
 
   <!-- Performance hints -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
@@ -27,7 +26,7 @@
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="Fashion Store — Ropa y accesorios en Cali">
   <meta property="og:description" content="Ropa de moda, accesorios y calzado. Pide por WhatsApp y recibe en casa en 48 horas.">
-  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/demo-tienda/">
+  <meta property="og:url" content="https://gabyzxdev.github.io/webdev-demos/demo-tienda/">
   <meta property="og:site_name" content="Fashion Store">
   <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80">
   <meta property="og:image:alt" content="Fachada de Fashion Store">
@@ -42,9 +41,6 @@
   <!-- Icono -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%237b2d8b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white'>F</text></svg>">
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%237b2d8b'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white'>F</text></svg>">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/variables.css">
@@ -74,63 +70,342 @@
   </script>
 </head>
 <body class="theme-tienda">
+
   <a href="#inicio" class="skip-link">Saltar al contenido</a>
 
+  <!-- NAVEGACIÓN -->
   <header class="nav">
     <div class="nav-inner">
       <a href="#inicio" class="logo">Fashion Store</a>
-      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="menu" id="menu-principal" aria-label="Menú principal">
         <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#info">Info</a>
+        <a href="#productos">Catálogo</a>
+        <a href="#info">Ventajas</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573178695838" class="btn-wa btn">Pedir por WhatsApp</a>
+        <a href="https://wa.me/573178695838" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Comprar</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO SPLIT -->
     <section id="inicio" class="hero">
-      <div class="hero-texto">
-        <h1>Moda que te hace brillar</h1>
-        <p>Ropa femenina, masculina y accesorios de tendencia. Mira nuestro catálogo, pide por WhatsApp y recibe en Cali.</p>
-        <a href="https://wa.me/573178695838" class="btn btn-wa">Pedir por WhatsApp</a>
-        <a href="#productos" class="btn btn-out">Ver catálogo</a>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=80');"></div>
+      
+      <div class="hero-split">
+        <div class="hero-content">
+          <span class="hero-badge">✨ Nueva colección Otoño/Invierno</span>
+          <h1>Moda que te hace <span class="hero-gradient-text">brillar</span></h1>
+          <p>Ropa femenina, masculina y accesorios de tendencia. Mira nuestro catálogo, pide por WhatsApp y recibe en Cali en 48 horas.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Comprar por WhatsApp</a>
+            <a href="#productos" class="btn btn-out btn-lg">Ver catálogo</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="500">500</div>
+              <div class="hero-stat__label">Referencias activas</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="48">48</div>
+              <div class="hero-stat__label">Horas entrega Cali</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="7">7</div>
+              <div class="hero-stat__label">Días para cambios</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Fashion Store - moda y tendencias" width="600" height="500">
+        </div>
       </div>
     </section>
 
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- CATÁLOGO CON FILTROS -->
     <section id="productos" class="sec">
-      <h2>Catálogo</h2>
-      <div class="cards">
-        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Camiseta urbana de algodón premium" width="280" height="180"><h3>Camiseta urbana</h3><p>Algodón premium, todos los colores.</p><span class="price">$45.000</span></article>
-        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Vestido elegante para toda ocasión" width="280" height="180"><h3>Vestido elegante</h3><p>Perfecto para toda ocasión.</p><span class="price">$89.000</span></article>
-        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Chaqueta casual resistente al agua" width="280" height="180"><h3>Chaqueta</h3><p>Estilo casual, resistente al agua.</p><span class="price">$120.000</span></article>
-        <article class="card"><img loading="lazy" src="images/prenda-placeholder.svg" alt="Conjunto deportivo de línea fitness" width="280" height="180"><h3>Conjunto deportivo</h3><p>Línea fitness, material ligero.</p><span class="price">$99.000</span></article>
+      <div class="sec-header">
+        <span class="sec-badge">Catálogo</span>
+        <h2>Nuestro catálogo</h2>
+        <p>Moda femenina, masculina y accesorios. Envío gratis en Cali en compras superiores a $150.000.</p>
       </div>
-      <a href="https://wa.me/573178695838" class="btn btn-wa">Pedir tu pedido por WhatsApp</a>
+
+      <!-- Filtros -->
+      <div class="filter-chips" role="group" aria-label="Filtrar por categoría">
+        <button class="filter-chip active" data-filter="all">Todo</button>
+        <button class="filter-chip" data-filter="mujer">Mujer</button>
+        <button class="filter-chip" data-filter="hombre">Hombre</button>
+        <button class="filter-chip" data-filter="accesorios">Accesorios</button>
+        <button class="filter-chip" data-filter="ofertas">Ofertas</button>
+      </div>
+
+      <div class="cards" id="products-grid">
+        <article class="card" data-category="mujer">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80" alt="Camiseta urbana mujer" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Mujer</span>
+            <h3>Camiseta urbana algodón</h3>
+            <p>Algodón premium, corte oversize, todos los colores.</p>
+            <div class="card-footer">
+              <span class="card-price">$45.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20la%20Camiseta%20urbana%20algod%C3%B3n" class="card-link">Pedir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card" data-category="mujer">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Vestido elegante" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Mujer</span>
+            <h3>Vestido elegante midi</h3>
+            <p>Perfecto para toda ocasión. Tela fluida, talla S-XL.</p>
+            <div class="card-footer">
+              <span class="card-price">$89.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20el%20Vestido%20elegante%20midi" class="card-link">Pedir</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card" data-category="hombre">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1556905051-9c3a4f6e6b6b?w=600&q=80" alt="Chaqueta casual hombre" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Hombre</span>
+            <h3>Chaqueta casual impermeable</h3>
+            <p>Estilo casual, resistente al agua, bolsillos funcionales.</p>
+            <div class="card-footer">
+              <span class="card-price">$120.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20la%20Chaqueta%20casual%20impermeable" class="card-link">Pedir</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card" data-category="hombre">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1507477338266-0c0f6b9ab5d3?w=600&q=80" alt="Conjunto deportivo" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Hombre</span>
+            <h3>Conjunto deportivo performance</h3>
+            <p>Línea fitness, material transpirable, secado rápido.</p>
+            <div class="card-footer">
+              <span class="card-price">$99.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20el%20Conjunto%20deportivo%20performance" class="card-link">Pedir</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card" data-category="accesorios" data-badge="Nuevo">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80" alt="Bolso tote" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Accesorios</span>
+            <h3>Bolso tote cuero vegano</h3>
+            <p>Espacioso, resistente, colores neutros. Ideal para trabajo.</p>
+            <div class="card-footer">
+              <span class="card-price">$75.000</span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20el%20Bolso%20tote%20cuero%20vegano" class="card-link">Pedir</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card" data-category="accesorios" data-badge="Oferta">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1584030373173-9b0e2e3b3b3b?w=600&q=80" alt="Gafas de sol" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Accesorios</span>
+            <h3>Gafas de sol polarizadas</h3>
+            <p>Protección UV400, marco ligero, estuche incluido.</p>
+            <div class="card-footer">
+              <span class="card-price">$45.000 <span style="font-size:var(--fs-sm);font-weight:400;color:var(--color-success);text-decoration:line-through">$65.000</span></span>
+              <a href="https://wa.me/573178695838?text=Hola%2C%20quiero%20pedir%20las%20Gafas%20de%20sol%20polarizadas" class="card-link">Pedir</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="info" class="sec dark">
-      <h2>¿Por qué comprar con nosotros?</h2>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- VENTAJAS -->
+    <section id="info" class="sec sec--alt">
+      <div class="sec-header">
+        <span class="sec-badge">Por qué elegirnos</span>
+        <h2>Más que una tienda, una experiencia</h2>
+        <p>Detrás de cada prenda hay dedicación, calidad y atención personalizada.</p>
+      </div>
+      
       <div class="cards">
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73 20 20 0 0 0-8-2 2 2 0 0 1-2 0 20 20 0 0 0-8 2 2 2 0 0 0-1 1.73 2 2 0 0 1 2 2 20 20 0 0 0 8 2 2 2 0 0 1 2 0 20 20 0 0 0 8-2 2 2 0 0 1-2-2V8z"/><circle cx="5.5" cy="15.5" r="1"/><circle cx="18.5" cy="15.5" r="1"/></svg></span><h3>Envíos</h3><p>Entrega en toda Cali. Envíos nacionales con seguimiento.</p></article>
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4"/><path d="M3 8h4"/><path d="M17 16v-6"/><path d="M13 10h4"/><path d="M21 12H9"/><path d="M3 16h18"/></svg></span><h3>Cambios</h3><p>Cambios gratis durante los primeros 7 días.</p></article>
-        <article class="card"><span class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h3>WhatsApp</h3><p>Atención en minutos. Resuelve todas tus dudas al instante.</p></article>
+        <article class="card card--featured">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73 20 20 0 0 0-8-2 2 2 0 0 1-2 0 20 20 0 0 0-8 2 2 2 0 0 0-1 1.73 2 2 0 0 1 2 2 20 20 0 0 0 8 2 2 2 0 0 1 2 0 20 20 0 0 0 8-2 2 2 0 0 1-2-2V8z"/><circle cx="5.5" cy="15.5" r="1"/><circle cx="18.5" cy="15.5" r="1"/></svg></span>
+            <h3>Envíos gratis en Cali</h3>
+            <p>Entrega en 24-48h en toda Cali. Envíos nacionales con seguimiento en tiempo real.</p>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4"/><path d="M3 8h4"/><path d="M17 16v-6"/><path d="M13 10h4"/><path d="M21 12H9"/><path d="M3 16h18"/></svg></span>
+            <h3>Cambios gratis 7 días</h3>
+            <p>¿No te quedó bien? Cambia tu prenda sin costo en los primeros 7 días. Sin preguntas.</p>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="card-body" style="text-align:center;padding:var(--space-8)">
+            <span class="ico" style="margin:0 auto var(--space-4);width:72px;height:72px;font-size:var(--fs-3xl)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>Asesoría por WhatsApp</h3>
+            <p>¿No sabes tu talla? Te asesoramos en minutos por WhatsApp. Respuesta en menos de 5 min.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="contacto" class="sec">
-      <h2>Pide tu pedido hoy</h2>
-      <p>Entrega en 48 horas. Pago contra entrega o transferencia.</p>
-      <a href="https://wa.me/573178695838" class="btn btn-wa">Escribir por WhatsApp</a>
-      <p class="contacto" style="margin-top:var(--space-6); color:var(--color-gray-600);"><a href="tel:+573178695838">📞 +57 317 869 5838</a> | 📧 <a href="mailto:ventas@fashionstore.com">ventas@fashionstore.com</a></p>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" data-target="500">500</div>
+        <div class="stat-label">Referencias activas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="48">48</div>
+        <div class="stat-label">Horas entrega Cali</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="7">7</div>
+        <div class="stat-label">Días para cambios</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="10000">10</div>
+        <div class="stat-label">Clientes felices</div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">Contáctanos</span>
+        <h2>¿Listo para renovar tu clóset?</h2>
+        <p>Escríbenos por WhatsApp y un asesor te ayudará en minutos.</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg btn-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Comprar por WhatsApp</a>
+        <div style="margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: center; color: var(--color-gray-300); font-size: var(--fs-base);">
+          <a href="tel:+573178695838" style="color: inherit; text-decoration: underline;">📞 +57 317 869 5838</a>
+          <a href="mailto:ventas@fashionstore.com" style="color: inherit; text-decoration: underline;">📧 ventas@fashionstore.com</a>
+          <span>📍 Cali, Colombia</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="pie">&copy; 2026 Fashion Store · Cali, Colombia</footer>
+  <!-- FOOTER v2 -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="footer-logo">Fashion Store</a>
+        <p class="footer-tagline">Moda y tendencias en Cali. Calidad, estilo y envío rápido a tu puerta.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/573178695838" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Categorías</h3>
+        <nav class="footer-links">
+          <a href="#productos" data-filter="mujer">Mujer</a>
+          <a href="#productos" data-filter="hombre">Hombre</a>
+          <a href="#productos" data-filter="accesorios">Accesorios</a>
+          <a href="#productos" data-filter="ofertas">Ofertas</a>
+        </nav>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Servicios</h3>
+        <nav class="footer-links">
+          <a href="#">Envío gratis Cali +$150k</a>
+          <a href="#">Cambios 7 días gratis</a>
+          <a href="#">Asesoría WhatsApp</a>
+          <a href="#">Tarjetas regalo</a>
+        </nav>
+      </div>
+      
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+573178695838">+57 317 869 5838</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:ventas@fashionstore.com">ventas@fashionstore.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Cali, Colombia</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Fashion Store · Cali, Colombia</p>
+      <p class="footer-made">Hecho con <strong>💜</strong> en Cali por <a href="https://gabyzxdev.github.io/webdev-demos/portafolio/" target="_blank" rel="noopener">Angel Gabriel Campo</a></p>
+    </div>
+  </footer>
 
   <script src="../shared/nav.js"></script>
+  <script src="../shared/scroll-reveal.js"></script>
+  <script src="../shared/whatsapp-float.js"></script>
+  <script>
+    // Filter chips functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var chips = document.querySelectorAll('.filter-chip');
+      var cards = document.querySelectorAll('#products-grid .card');
+      
+      chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+          var filter = this.getAttribute('data-filter');
+          
+          chips.forEach(function(c) { c.classList.remove('active'); });
+          this.classList.add('active');
+          
+          cards.forEach(function(card) {
+            var category = card.getAttribute('data-category');
+            var match = filter === 'all' || category === filter;
+            card.style.display = match ? 'grid' : 'none';
+            if (match) {
+              card.style.animation = 'fade-in-up 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both';
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/scroll-reveal.js"></script>
   <script src="../shared/whatsapp-float.js"></script>
 </body>
 </html>

@@ -7,12 +7,11 @@
   <meta name="description" content="Restaurante La Parrilla en Cali. Asados al carbón, comida típica colombiana y ambiente familiar. Pide por WhatsApp y ven a visitarnos.">
   <meta name="author" content="Restaurante La Parrilla">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gabyzxdev.github.io/WebDev/demo-restaurante/">
+  <link rel="canonical" href="https://gabyzxdev.github.io/webdev-demos/demo-restaurante/">
 
   <!-- Performance hints -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://images.unsplash.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
@@ -27,7 +26,7 @@
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="Restaurante La Parrilla — Los mejores asados de Cali">
   <meta property="og:description" content="Asados al carbón, comida típica colombiana y ambiente familiar. Pide por WhatsApp.">
-  <meta property="og:url" content="https://gabyzxdev.github.io/WebDev/demo-restaurante/">
+  <meta property="og:url" content="https://gabyzxdev.github.io/webdev-demos/demo-restaurante/">
   <meta property="og:site_name" content="Restaurante La Parrilla">
   <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80">
   <meta property="og:image:alt" content="Plato de asado en Restaurante La Parrilla">
@@ -42,11 +41,9 @@
   <!-- Icono -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c0392b'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white'>🍖</text></svg>">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/variables.css">
+  <link rel="stylesheet" href="../shared/base.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../shared/whatsapp-float.css">
 
@@ -77,119 +74,514 @@
 
   <a href="#inicio" class="skip-link">Saltar al contenido</a>
 
-  <!-- BARRA DE NAVEGACIÓN -->
+  <!-- NAVEGACIÓN -->
   <header class="nav">
-    <div class="nav-contenedor">
+    <div class="nav-inner">
       <a href="#inicio" class="logo">La Parrilla</a>
-      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="menu" id="menu-principal" aria-label="Menú principal">
         <a href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#menu">Menú</a>
         <a href="#testimonios">Opiniones</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573178695838" class="btn-whatsapp-nav">Pedir por WhatsApp</a>
+        <a href="https://wa.me/573178695838" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Pedir</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- PORTADA -->
+    <!-- HERO SPLIT -->
     <section id="inicio" class="hero">
-      <div class="hero-texto">
-        <h1>Los mejores asados de Cali</h1>
-        <p>Carne a la parrilla, comida típica colombiana y un ambiente familiar que te hará volver.</p>
-        <a href="https://wa.me/573178695838" class="btn-whatsapp">Pedir por WhatsApp</a>
-        <a href="#menu" class="btn-out">Ver el menú</a>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=80');"></div>
+      
+      <div class="hero-split">
+        <div class="hero-content">
+          <span class="hero-badge">🔥 Asados al carbón tradicional</span>
+          <h1>Los mejores <span class="hero-gradient-text">asados de Cali</span></h1>
+          <p>Carne a la parrilla, comida típica colombiana y un ambiente familiar que te hará volver. 15 años de tradición y sabor auténtico.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Pedir por WhatsApp</a>
+            <a href="#menu" class="btn btn-out btn-lg">Ver el menú</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="15">15</div>
+              <div class="hero-stat__label">Años de tradición</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="500">500</div>
+              <div class="hero-stat__label">Platos servidos/día</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat__number" data-target="98">98</div>
+              <div class="hero-stat__label">% Satisfacción</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80" alt="Parrillada La Parrilla - asado al carbón tradicional" width="600" height="500">
+        </div>
       </div>
     </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
 
     <!-- NOSOTROS -->
-    <section id="nosotros" class="seccion">
-      <h2>Sobre nosotros</h2>
-      <p>Somos un restaurante familiar en el corazón de Cali, abierto desde 2010. Usamos ingredientes frescos del mercado, leña real para la parrilla y recetas que pasan de generación en generación.</p>
-      <div class="tarjetas">
-        <div class="tarjeta">
-          <h3>📍 Ubicación</h3>
-          <p>Calle 5 # 20-30, Granada, Cali</p>
+    <section id="nosotros" class="sec">
+      <div class="sec-header">
+        <span class="sec-badge">Nuestra historia</span>
+        <h2>Tradición familiar desde 2009</h2>
+        <p>Somos un restaurante familiar en el corazón de Cali. Usamos ingredientes frescos del mercado, leña real para la parrilla y recetas que pasan de generación en generación.</p>
+      </div>
+      
+      <div class="cards">
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Interior del restaurante La Parrilla" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Ubicación</span>
+            <h3>Calle 5 # 20-30, Granada</h3>
+            <p>En el corazón de Cali, fácil acceso y parqueadero propio.</p>
+            <div class="card-footer">
+              <a href="https://wa.me/573178695838" class="card-link">Cómo llegar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Horario de atención" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Horario</span>
+            <h3>Lunes a domingo · 12:00 pm – 11:00 pm</h3>
+            <p>Abierto todos los días. Pedidos para llevar hasta las 10:30 pm.</p>
+            <div class="card-footer">
+              <a href="tel:+573178695838" class="card-link">Llamar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Especialidades de la casa" width="400" height="250">
+          <div class="card-body">
+            <span class="card-category">Especialidad</span>
+            <h3>Asado al carbón, bandeja paisa y sancocho</h3>
+            <p>Recetas tradicionales con ingredientes frescos del mercado local.</p>
+            <div class="card-footer">
+              <a href="#menu" class="card-link">Ver menú <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider section-divider--top">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- MENÚ CON TABS -->
+    <section id="menu" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">Nuestra carta</span>
+        <h2>Nuestro menú</h2>
+        <p>Platos preparados al momento con ingredientes frescos y leña de verdad.</p>
+      </div>
+
+      <!-- Menu tabs -->
+      <div class="menu-tabs" role="tablist" aria-label="Categorías del menú">
+        <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="panel-entradas" id="tab-entradas">Entradas</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-platos" id="tab-platos">Platos fuertes</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-postres" id="tab-postres">Postres</button>
+        <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-bebidas" id="tab-bebidas">Bebidas</button>
+      </div>
+
+      <!-- Entradas -->
+      <div class="tab-panel active" id="panel-entradas" role="tabpanel" aria-labelledby="tab-entradas">
+        <div class="cards">
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1603046891768-f10f1f87d0e1?w=600&q=80" alt="Chorizo antioqueño" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Entrada</span>
+              <h3>Chorizo antioqueño</h3>
+              <p>Chorizo tradicional a la parrilla con arepa y hogao.</p>
+              <div class="card-footer">
+                <span class="card-price">$12.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80" alt="Empanadas de carne" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Entrada</span>
+              <h3>Empanadas de carne</h3>
+              <p>Empanadas criollas con hogao y ají casero.</p>
+              <div class="card-footer">
+                <span class="card-price">$8.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="Chicharrón" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Entrada</span>
+              <h3>Chicharrón crujiente</h3>
+              <p>Chicharrón de cerdo con arepa y guacamole.</p>
+              <div class="card-footer">
+                <span class="card-price">$15.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="tarjeta">
-          <h3>🕐 Horario</h3>
-          <p>Lunes a domingo · 12:00 pm – 11:00 pm</p>
+      </div>
+
+      <!-- Platos fuertes -->
+      <div class="tab-panel" id="panel-platos" role="tabpanel" aria-labelledby="tab-platos" hidden>
+        <div class="cards">
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Parrillada La Parrilla" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Plato fuerte</span>
+              <h3>Parrillada La Parrilla</h3>
+              <p>Chorizo, morcilla, lomo, arepa, papa criolla y hogao.</p>
+              <div class="card-footer">
+                <span class="card-price">$35.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Bandeja paisa" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Plato fuerte</span>
+              <h3>Bandeja paisa</h3>
+              <p>Frijoles, arroz, chicharrón, huevo, aguacate, arepa y plátano.</p>
+              <div class="card-footer">
+                <span class="card-price">$28.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Sancocho de gallina" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Plato fuerte</span>
+              <h3>Sancocho de gallina</h3>
+              <p>Con arroz, aguacate, ají casero y arepa.</p>
+              <div class="card-footer">
+                <span class="card-price">$22.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Lomo al trapo" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Plato fuerte</span>
+              <h3>Lomo al trapo</h3>
+              <p>Cocido al carbón, acompañado de papa chorriada y hogao.</p>
+              <div class="card-footer">
+                <span class="card-price">$45.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="tarjeta">
-          <h3>🍖 Especialidad</h3>
-          <p>Asado al carbón, bandeja paisa y sancocho</p>
+      </div>
+
+      <!-- Postres -->
+      <div class="tab-panel" id="panel-postres" role="tabpanel" aria-labelledby="tab-postres" hidden>
+        <div class="cards">
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Flan de leche" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Postre</span>
+              <h3>Flan de leche casero</h3>
+              <p>Receta de la abuela con caramelo artesanal.</p>
+              <div class="card-footer">
+                <span class="card-price">$8.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Postre de natas" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Postre</span>
+              <h3>Postre de natas</h3>
+              <p>Tradicional postre colombiano con queso fresco.</p>
+              <div class="card-footer">
+                <span class="card-price">$9.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Bebidas -->
+      <div class="tab-panel" id="panel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" hidden>
+        <div class="cards">
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Jugo natural" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Bebida</span>
+              <h3>Jugos naturales</h3>
+              <p>Maracuyá, lulo, mora, guanábana - 400ml.</p>
+              <div class="card-footer">
+                <span class="card-price">$6.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-img" loading="lazy" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Cerveza" width="400" height="250">
+            <div class="card-body">
+              <span class="card-category">Bebida</span>
+              <h3>Cerveza nacional</h3>
+              <p>Aguila, Club Colombia, Poker - 330ml.</p>
+              <div class="card-footer">
+                <span class="card-price">$5.000</span>
+                <a href="https://wa.me/573178695838" class="card-link">Pedir</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- MENÚ -->
-    <section id="menu" class="seccion seccion-oscura">
-      <h2>Nuestro menú</h2>
-      <div class="grid-menu">
-        <article class="plato">
-          <img loading="lazy" src="images/plato-placeholder.svg" alt="Parrillada La Parrilla - chorizo, morcilla, lomo y arepa" width="280" height="180">
-          <h3>Parrillada La Parrilla</h3>
-          <p>Chorizo, morcilla, lomo y arepa.</p>
-          <span class="precio">$35.000</span>
-        </article>
-        <article class="plato">
-          <img loading="lazy" src="images/plato-placeholder.svg" alt="Bandeja paisa - frijoles, arroz, chicharrón, huevo, aguacate" width="280" height="180">
-          <h3>Bandeja paisa</h3>
-          <p>Frijoles, arroz, chicharrón, huevo, aguacate.</p>
-          <span class="precio">$28.000</span>
-        </article>
-        <article class="plato">
-          <img loading="lazy" src="images/plato-placeholder.svg" alt="Sancocho de gallina - con arroz, aguacate y ají casero" width="280" height="180">
-          <h3>Sancocho de gallina</h3>
-          <p>Con arroz, aguacate y ají casero.</p>
-          <span class="precio">$22.000</span>
-        </article>
-        <article class="plato">
-          <img loading="lazy" src="images/plato-placeholder.svg" alt="Lomo al trapo - cocido al carbón, acompañado de papa chorriada" width="280" height="180">
-          <h3>Lomo al trapo</h3>
-          <p>Cocido al carbón, acompañado de papa chorriada.</p>
-          <span class="precio">$45.000</span>
-        </article>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider section-divider--top">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="sec">
+      <div class="sec-header">
+        <span class="sec-badge">Opiniones</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>Más de 500 reseñas en Google con 4.8 estrellas promedio.</p>
       </div>
-      <a href="https://wa.me/573178695838" class="btn-whatsapp">Pide tu pedido</a>
+
+      <div class="testimonials-carousel" id="testimonials-carousel">
+        <div class="testimonials-track">
+          <article class="testimonial">
+            <div class="testimonial-content">
+              "La mejor parrillada de Cali, se siente el sabor de la leña en cada bocado. Volveré sin duda."
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">CM</div>
+              <div>
+                <div class="testimonial-name">Carlos M.</div>
+                <div class="testimonial-role">Cliente frecuente · 12 reseñas</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">★★★★★</div>
+          </article>
+          
+          <article class="testimonial">
+            <div class="testimonial-content">
+              "Excelente atención y la bandeja paisa está enorme. La mejor relación calidad-precio de Cali."
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">LP</div>
+              <div>
+                <div class="testimonial-name">Laura P.</div>
+                <div class="testimonial-role">Food blogger · 45 reseñas</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">★★★★★</div>
+          </article>
+          
+          <article class="testimonial">
+            <div class="testimonial-content">
+              "Pedí por WhatsApp y llegó a tiempo. Todo muy rico, bien empacado y caliente. Recomendado 100%."
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AR</div>
+              <div>
+                <div class="testimonial-name">Andrés R.</div>
+                <div class="testimonial-role">Cliente delivery · 8 reseñas</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">★★★★★</div>
+          </article>
+          
+          <article class="testimonial">
+            <div class="testimonial-content">
+              "Celebramos el cumpleaños de mi papá aquí. El lomo al trapo espectacular y la atención de primera."
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MG</div>
+              <div>
+                <div class="testimonial-name">María G.</div>
+                <div class="testimonial-role">Eventos familiares · 3 reseñas</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">★★★★★</div>
+          </article>
+        </div>
+      </div>
+      
+      <!-- Carousel controls -->
+      <div class="carousel-controls" aria-label="Navegación de testimonios">
+        <button class="carousel-btn prev" aria-label="Testimonio anterior"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="carousel-dots" role="tablist" aria-label="Seleccionar testimonio"></div>
+        <button class="carousel-btn next" aria-label="Siguiente testimonio"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
     </section>
 
-    <!-- OPINIONES -->
-    <section id="testimonios" class="seccion">
-      <h2>Opiniones de clientes</h2>
-      <div class="tarjetas">
-        <blockquote class="tarjeta">
-          <p>"La mejor parrillada de Cali, se siente el sabor de la leña."</p>
-          <span class="autor">— Carlos M. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
-        </blockquote>
-        <blockquote class="tarjeta">
-          <p>"Excelente atención y la bandeja paisa está enorme."</p>
-          <span class="autor">— Laura P. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
-        </blockquote>
-        <blockquote class="tarjeta">
-          <p>"Pedí por WhatsApp y llegó a tiempo. Todo muy rico."</p>
-          <span class="autor">— Andrés R. <span aria-label="5 de 5 estrellas">★★★★★</span></span>
-        </blockquote>
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider section-divider--top">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M0,80 C300,20 600,80 900,20 1200,-40 1200,80 1200,80 Z" fill="var(--color-brand)" opacity="0.15"></path>
+      </svg>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" data-target="15">15</div>
+        <div class="stat-label">Años de experiencia</div>
       </div>
-    </section>
+      <div class="stat-item">
+        <div class="stat-number" data-target="500">500</div>
+        <div class="stat-label">Platos diarios</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="98">98</div>
+        <div class="stat-label">% Clientes felices</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="200">200</div>
+        <div class="stat-label">Eventos catering</div>
+      </div>
+    </div>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="seccion seccion-oscura">
-      <h2>Reserva o pide a domicilio</h2>
-      <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
-      <a href="https://wa.me/573178695838" class="btn-whatsapp">Escribir por WhatsApp</a>
-      <p class="telefono"><a href="tel:+573178695838">📞 +57 317 869 5838</a></p>
-      <p class="telefono">📧 <a href="mailto:correo@laparrilla.com">correo@laparrilla.com</a></p>
+    <section id="contacto" class="sec sec--dark">
+      <div class="sec-header">
+        <span class="sec-badge">Contáctanos</span>
+        <h2>Reserva o pide a domicilio</h2>
+        <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <a href="https://wa.me/573178695838" class="btn btn-wa btn-lg btn-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Escribir por WhatsApp</a>
+        <div style="margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: center; color: var(--color-gray-300); font-size: var(--fs-base);">
+          <a href="tel:+573178695838" style="color: inherit; text-decoration: underline;">📞 +57 317 869 5838</a>
+          <a href="mailto:correo@laparrilla.com" style="color: inherit; text-decoration: underline;">📧 correo@laparrilla.com</a>
+          <span>📍 Calle 5 # 20-30, Granada, Cali</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="pie">
-    <p>© 2026 Restaurante La Parrilla · Cali, Colombia</p>
+  <!-- FOOTER v2 -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="footer-logo">La Parrilla</a>
+        <p class="footer-tagline">Asados al carbón tradicional en Cali desde 2009. Sabor auténtico, ambiente familiar.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/573178695838" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Enlaces rápidos</h3>
+        <nav class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#menu">Menú</a>
+          <a href="#testimonios">Opiniones</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+      
+      <div>
+        <h3 class="footer-title">Horario</h3>
+        <nav class="footer-links">
+          <a href="#">Lunes a domingo</a>
+          <a href="#">12:00 pm – 11:00 pm</a>
+          <a href="#">Pedidos hasta 10:30 pm</a>
+          <a href="#">Domicilio disponible</a>
+        </nav>
+      </div>
+      
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+573178695838">+57 317 869 5838</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:correo@laparrilla.com">correo@laparrilla.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Calle 5 # 20-30, Granada, Cali</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Restaurante La Parrilla · Cali, Colombia</p>
+      <p class="footer-made">Hecho con <strong>💚</strong> en Cali por <a href="https://gabyzxdev.github.io/webdev-demos/portafolio/" target="_blank" rel="noopener">Angel Gabriel Campo</a></p>
+    </div>
   </footer>
 
   <script src="../shared/nav.js"></script>
+  <script src="../shared/scroll-reveal.js"></script>
+  <script src="../shared/carousel.js"></script>
   <script src="../shared/whatsapp-float.js"></script>
+  <script>
+    // Menu tabs functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var tabs = document.querySelectorAll('.menu-tab');
+      var panels = document.querySelectorAll('.tab-panel');
+      
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var target = this.getAttribute('aria-controls');
+          
+          tabs.forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+          
+          panels.forEach(function(p) {
+            p.hidden = true;
+            p.classList.remove('active');
+          });
+          var targetPanel = document.getElementById(target);
+          if (targetPanel) {
+            targetPanel.hidden = false;
+            targetPanel.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
