@@ -14,14 +14,12 @@
   --fs-3xl: clamp(1.875rem, 1.5rem + 2vw, 2.5rem);
   --fs-4xl: clamp(2.25rem, 1.8rem + 3vw, 3.5rem);
   --fs-5xl: clamp(3rem, 2.2rem + 4vw, 5rem);
-
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
-
   --line-height-tight: 1.05;
   --line-height-snug: 1.25;
   --line-height-normal: 1.5;
@@ -105,7 +103,11 @@
   --color-whatsapp-light: #dcfce7;
   --color-whatsapp-dark: #128c3e;
 
+  /* ===== ESPACIADO ADICIONAL ===== */
+  --space-1.5: 0.375rem;
+
   /* ===== COLORES DE MARCA POR TEMA (RGB para sombras coloreadas) ===== */
+
   /* Restaurante: rojo cálido */
   --color-restaurante: #c0392b;
   --color-restaurante-light: #e74c3c;
@@ -130,12 +132,6 @@
   --color-portafolio-dark: #0a1124;
   --color-portafolio-rgb: 15, 23, 42;
 
-  /* ===== WHATSAPP ===== */
-  --color-whatsapp: #25d366;
-  --color-whatsapp-hover: #1eaa4a;
-  --color-whatsapp-light: #dcfce7;
-  --color-whatsapp-dark: #128c3e;
-
   /* ===== GRADIENTES ===== */
   --gradient-brand: linear-gradient(135deg, var(--color-brand), var(--color-brand-light));
   --gradient-brand-soft: linear-gradient(135deg, var(--color-brand)15, var(--color-brand-light)15);
@@ -145,7 +141,7 @@
   --gradient-text-soft: linear-gradient(135deg, var(--color-brand)80, var(--color-brand-light)80);
   --gradient-whatsapp: linear-gradient(135deg, var(--color-whatsapp), var(--color-whatsapp-hover));
   --gradient-surface: linear-gradient(180deg, var(--color-white), var(--color-gray-50));
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  --gradient-glass: linear-gradient(135deg, rgb(255 255 255 / 15%), rgb(255 255 255 / 5%));
 
   /* ===== SOMBRAS COLOREADAS ===== */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
@@ -156,10 +152,10 @@
   --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 5%);
 
   /* Sombras con color de marca */
-  --shadow-brand: 0 10px 40px -10px rgb(var(--color-brand-rgb) / 0.35);
-  --shadow-brand-lg: 0 20px 60px -15px rgb(var(--color-brand-rgb) / 0.45);
-  --shadow-brand-xl: 0 30px 80px -20px rgb(var(--color-brand-rgb) / 0.5);
-  --shadow-whatsapp: 0 10px 40px -10px rgb(37, 211, 102 / 0.4);
+  --shadow-brand: 0 10px 40px -10px rgb(var(--color-brand-rgb) / 35%);
+  --shadow-brand-lg: 0 20px 60px -15px rgb(var(--color-brand-rgb) / 45%);
+  --shadow-brand-xl: 0 30px 80px -20px rgb(var(--color-brand-rgb) / 50%);
+  --shadow-whatsapp: 0 10px 40px -10px rgb(37, 211, 102 / 40%);
   --shadow-card: 0 4px 20px -4px rgb(0 0 0 / 8%);
   --shadow-card-hover: 0 20px 40px -12px rgb(0 0 0 / 12%);
   --shadow-elevation-1: 0 2px 8px -2px rgb(0 0 0 / 6%);
@@ -167,20 +163,20 @@
   --shadow-elevation-3: 0 16px 48px -8px rgb(0 0 0 / 10%);
 
   /* ===== GLASSMORPHISM ===== */
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-bg-strong: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --glass-border-strong: rgba(255, 255, 255, 0.18);
+  --glass-bg: rgb(255 255 255 / 8%);
+  --glass-bg-strong: rgb(255 255 255 / 12%);
+  --glass-border: rgb(255 255 255 / 12%);
+  --glass-border-strong: rgb(255 255 255 / 18%);
   --glass-blur: blur(20px) saturate(180%);
   --glass-blur-light: blur(12px) saturate(150%);
 
   /* Dark mode glass */
-  --glass-bg-dark: rgba(15, 23, 42, 0.85);
-  --glass-border-dark: rgba(255, 255, 255, 0.08);
+  --glass-bg-dark: rgb(15 23 42 / 85%);
+  --glass-border-dark: rgb(255 255 255 / 8%);
 
   /* ===== PATTERNS CSS (para backgrounds) ===== */
-  --pattern-dots: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
-  --pattern-grid: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px);
+  --pattern-dots: radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0);
+  --pattern-grid: linear-gradient(currentcolor 1px, transparent 1px), linear-gradient(90deg, currentcolor 1px, transparent 1px);
   --pattern-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
 
   /* ===== SCROLL PROGRESS BAR ===== */
@@ -233,6 +229,7 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: 100%;
+
   /* Scroll progress bar container */
   overflow-x: hidden;
 }
@@ -263,7 +260,7 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 img {
@@ -376,13 +373,16 @@ img {
   .nav, .btn-whatsapp, .menu-btn, footer, .whatsapp-float, .scroll-progress {
     display: none !important;
   }
+
   body {
     font-size: 12pt;
     line-height: 1.5;
   }
+
   a {
     text-decoration: underline;
   }
+
   a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 0.8em;
@@ -396,7 +396,7 @@ img {
   color: var(--color-white);
 }
 
-::-moz-selection {
+::selection {
   background: var(--color-brand);
   color: var(--color-white);
 }

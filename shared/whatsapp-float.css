@@ -25,7 +25,7 @@
   height: 64px;
   border-radius: var(--radius-full);
   border: 2px solid var(--color-whatsapp);
-  opacity: 0;
+  opacity: 0%;
   animation: pulse-ring 2s ease-out infinite;
 }
 
@@ -36,11 +36,12 @@
 @keyframes pulse-ring {
   0% {
     transform: translate(50%, 50%) scale(1);
-    opacity: 0.4;
+    opacity: 40%;
   }
+
   100% {
     transform: translate(50%, 50%) scale(2.5);
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -66,22 +67,22 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255 255 255 / 20%);
   border-radius: inherit;
   transform: scale(0);
-  opacity: 0;
+  opacity: 0%;
   transition: transform var(--transition-normal), opacity var(--transition-fast);
 }
 
 .whatsapp-float__btn:active::before {
   transform: scale(2.5);
-  opacity: 1;
+  opacity: 100%;
   transition: transform 0ms, opacity 0ms;
 }
 
 .whatsapp-float__btn:hover {
   transform: scale(1.08);
-  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgb(37 211 102 / 20%);
 }
 
 .whatsapp-float__btn:focus-visible {
@@ -105,7 +106,6 @@
   position: absolute;
   right: 100%;
   top: 50%;
-  transform: translateY(-50%);
   margin-right: var(--space-3);
   padding: var(--space-2) var(--space-4);
   background: var(--color-gray-900);
@@ -114,7 +114,7 @@
   font-size: var(--fs-sm);
   font-weight: var(--font-weight-medium);
   white-space: nowrap;
-  opacity: 0;
+  opacity: 0%;
   transform: translateY(-50%) translateX(10px) scale(0.9);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
   pointer-events: none;
@@ -132,7 +132,7 @@
 }
 
 .whatsapp-float:hover .whatsapp-float__label {
-  opacity: 1;
+  opacity: 100%;
   transform: translateY(-50%) translateX(0) scale(1);
 }
 
@@ -156,15 +156,14 @@
 .quote-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgb(15 23 42 / 85%);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   animation: fade-in 0.3s ease-out;
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0%; }
+  to { opacity: 100%; }
 }
 
 .quote-modal__content {
@@ -183,11 +182,12 @@
 
 @keyframes modal-in {
   from { 
-    opacity: 0; 
+    opacity: 0%; 
     transform: translateY(30px) scale(0.95); 
   }
+
   to { 
-    opacity: 1; 
+    opacity: 100%; 
     transform: translateY(0) scale(1); 
   }
 }
@@ -207,7 +207,6 @@
   color: var(--color-gray-900);
   margin: 0;
   background: var(--gradient-text);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -286,7 +285,7 @@
 .quote-modal__select:focus {
   outline: none;
   border-color: var(--color-brand);
-  box-shadow: 0 0 0 4px rgb(var(--color-brand-rgb) / 0.15);
+  box-shadow: 0 0 0 4px rgb(var(--color-brand-rgb) / 15%);
   background: var(--color-white);
 }
 
@@ -338,7 +337,7 @@
 
 .quote-modal__submit:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-whatsapp), 0 0 0 4px rgb(37 211 102 / 20%);
 }
 
 .quote-modal__submit:focus-visible {
@@ -347,7 +346,7 @@
 }
 
 .quote-modal__submit:disabled {
-  opacity: 0.6;
+  opacity: 60%;
   cursor: not-allowed;
   transform: none;
 }

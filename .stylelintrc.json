@@ -3,7 +3,7 @@
   "rules": {
     "color-hex-length": "short",
     "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
-    "custom-property-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "custom-property-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+(\\.[0-9]+)?)*$",
     "property-no-unknown": true,
     "declaration-block-no-duplicate-properties": true,
     "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global", "local"] }],
