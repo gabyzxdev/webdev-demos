@@ -8,7 +8,7 @@
      CONFIGURATION
      ========================================================================== */
   var WHATSAPP_NUMBER = '573178695838';
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/QUOTE_FORM_ID'; // Reemplazar con tu Formspree ID
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgawoaky';
   var DEFAULT_MESSAGE = 'Hola, vi su web y quiero cotizar una página para mi {tipo}. Mi nombre es {nombre}, mi WhatsApp es {tel}. ¿Cuánto cuesta y en cuánto tiempo lo entrega?';
 
   /* ==========================================================================
