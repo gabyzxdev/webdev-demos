@@ -11,14 +11,26 @@
   var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgawoaky';
   var DEFAULT_MESSAGE = 'Hola, vi su web y quiero cotizar una página para mi {tipo}. Mi nombre es {nombre}, mi WhatsApp es {tel}. ¿Cuánto cuesta y en cuánto tiempo lo entrega?';
 
-  /* ==========================================================================
-     UTILITIES
-     ========================================================================== */
-  function createElement(html) {
-    var div = document.createElement('div');
-    div.innerHTML = html.trim();
-    return div.firstChild;
-  }
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+function escapeHtml(text) {
+  var div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function sanitizeInput(text) {
+  return text.replace(/[<>\"'&]/g, function(c) {
+    return {'<':'<','>':'>','"':'"',"'":''','&':'&'}[c];
+  });
+}
+
+function createElement(html) {
+  var template = document.createElement('template');
+  template.innerHTML = html.trim();
+  return template.content.firstChild;
+}
 
   function getPageType() {
     var path = window.location.pathname;
@@ -31,9 +43,9 @@
 
   function buildWhatsAppMessage(formData) {
     var msg = DEFAULT_MESSAGE
-      .replace('{tipo}', formData.tipo || getPageType())
-      .replace('{nombre}', formData.nombre || 'No proporcionado')
-      .replace('{tel}', formData.whatsapp || 'No proporcionado');
+      .replace('{tipo}', sanitizeInput(formData.tipo || getPageType()))
+      .replace('{nombre}', sanitizeInput(formData.nombre || 'No proporcionado'))
+      .replace('{tel}', sanitizeInput(formData.whatsapp || 'No proporcionado'));
     return encodeURIComponent(msg);
   }
 
@@ -52,11 +64,12 @@
     }
     
     if (input.type === 'tel' && value) {
-      var phoneRegex = /^[\+]?[0-9\s\-]{10,}$/;
-      if (!phoneRegex.test(value)) {
+      /* Stricter Colombian phone validation: +57 3XX XXX XXXX or 3XX XXX XXXX */
+      var phoneRegex = /^(\+57\s?)?3\d{2}\s?\d{3}\s?\d{4}$/;
+      if (!phoneRegex.test(value.replace(/\s/g, ''))) {
         input.classList.add('error');
         if (errorEl) {
-          errorEl.textContent = 'Ingresa un WhatsApp válido';
+          errorEl.textContent = 'Formato: +57 3XX XXX XXXX o 3XX XXX XXXX';
           errorEl.classList.add('visible');
         }
         return false;
@@ -193,11 +206,11 @@
 
       /* Build WhatsApp message */
       var msg = DEFAULT_MESSAGE
-        .replace('{tipo}', data.tipo || getPageType())
-        .replace('{nombre}', data.nombre || 'No proporcionado')
-        .replace('{tel}', data.whatsapp || 'No proporcionado');
+        .replace('{tipo}', sanitizeInput(data.tipo || getPageType()))
+        .replace('{nombre}', sanitizeInput(data.nombre || 'No proporcionado'))
+        .replace('{tel}', sanitizeInput(data.whatsapp || 'No proporcionado'));
       if (data.mensaje) {
-        msg += '%0A%0A' + encodeURIComponent('Mensaje: ' + data.mensaje);
+        msg += '%0A%0A' + encodeURIComponent('Mensaje: ' + sanitizeInput(data.mensaje));
       }
 
       /* Send to Formspree (background) */
@@ -213,11 +226,11 @@
       /* Open WhatsApp and show success */
       formspreePromise.then(function () {
         var msgEncoded = DEFAULT_MESSAGE
-          .replace('{tipo}', data.tipo || getPageType())
-          .replace('{nombre}', data.nombre || 'No proporcionado')
-          .replace('{tel}', data.whatsapp || 'No proporcionado');
+          .replace('{tipo}', sanitizeInput(data.tipo || getPageType()))
+          .replace('{nombre}', sanitizeInput(data.nombre || 'No proporcionado'))
+          .replace('{tel}', sanitizeInput(data.whatsapp || 'No proporcionado'));
         if (data.mensaje) {
-          msgEncoded += '%0A%0A' + encodeURIComponent('Mensaje: ' + data.mensaje);
+          msgEncoded += '%0A%0A' + encodeURIComponent('Mensaje: ' + sanitizeInput(data.mensaje));
         }
         
         window.open('https://wa.me/' + '573178695838' + '?text=' + msgEncoded, '_blank', 'noopener,noreferrer');
@@ -231,11 +244,11 @@
       }).catch(function () {
         /* Even if Formspree fails, open WhatsApp */
         var msgEncoded = DEFAULT_MESSAGE
-          .replace('{tipo}', data.tipo || getPageType())
-          .replace('{nombre}', data.nombre || 'No proporcionado')
-          .replace('{tel}', data.whatsapp || 'No proporcionado');
+          .replace('{tipo}', sanitizeInput(data.tipo || getPageType()))
+          .replace('{nombre}', sanitizeInput(data.nombre || 'No proporcionado'))
+          .replace('{tel}', sanitizeInput(data.whatsapp || 'No proporcionado'));
         if (data.mensaje) {
-          msgEncoded += '%0A%0A' + encodeURIComponent('Mensaje: ' + data.mensaje);
+          msgEncoded += '%0A%0A' + encodeURIComponent('Mensaje: ' + sanitizeInput(data.mensaje));
         }
         window.open('https://wa.me/' + '573178695838' + '?text=' + msgEncoded, '_blank', 'noopener,noreferrer');
         

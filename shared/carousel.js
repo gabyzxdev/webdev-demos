@@ -29,7 +29,10 @@
 
     /* Create dots */
     function createDots() {
-      dotsContainer.innerHTML = '';
+      /* Safe clear without innerHTML */
+      while (dotsContainer.firstChild) {
+        dotsContainer.removeChild(dotsContainer.firstChild);
+      }
       var totalDots = Math.ceil(slides.length / slidesPerView);
       for (var i = 0; i < totalDots; i++) {
         var dot = document.createElement('button');
